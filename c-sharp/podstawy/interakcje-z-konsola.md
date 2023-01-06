@@ -2,7 +2,7 @@
 
 ## Wstęp
 
-Zanim zaczniesz tworzyć aplikacje webowe, desktopowe czy mobilne, to najłatwieszym sposobem na interakcje z programem jest komunikacja poprzez konsole. W konsoli, w bardzo prosty sposób będziemy w stanie wyświetlać wiadomości, czy też prez konsolę będziemy przesyłać informacje do programu. 
+Zanim zaczniesz tworzyć aplikacje webowe, desktopowe czy mobilne, to najłatwieszym sposobem na interakcje z programem jest komunikacja poprzez konsole. W konsoli, w bardzo prosty sposób będziemy w stanie wyświetlać wiadomości, czy też przez konsolę będziemy przesyłać informacje do programu. 
 
 Aby móc wykonać interakcje z konsolą w języku C#, należy użyć klasy `System.Console` 
 
