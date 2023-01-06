@@ -1,6 +1,10 @@
 # Interakcje z konsolą
 
-Aby móc wykonać interakcje z konsolą w języku C#, należy użyć klasy `System.Console.` 
+## Wstęp
+
+Zanim zaczniesz tworzyć aplikacje webowe, desktopowe czy mobilne, to najłatwieszym sposobem na interakcje z programem jest komunikacja poprzez konsole. W konsoli, w bardzo prosty sposób będziemy w stanie wyświetlać wiadomości, czy też prez konsolę będziemy przesyłać informacje do programu. 
+
+Aby móc wykonać interakcje z konsolą w języku C#, należy użyć klasy `System.Console` 
 
 ## Wyświetlanie tekstu
 
@@ -11,13 +15,16 @@ Aby móc wykonać interakcje z konsolą w języku C#, należy użyć klasy `Syst
 
 ```
 
+> Do użycia klasy `Console` w powyższy sposób, musisz najpierw wskazać kompilatorowi korzystanie z przestrzeni nazw `System`, poprzez dodanie `using System;` na samej górze pliku c-sharp.
+
+
 Aby wyświetlić informacje w konsoli, mamy do dyspozycji dwie metody `Console.WriteLine()` oraz `Console.Write()`. Różnica między nimi polega na tym, że metoda `WriteLine` powróci do nowej linii w konsoli, podczas gdy metoda `Write` zostawi kursor na miejscu.
 
 ## Odczytywanie danych wprowadzonych przez użytkownika
 
 ```
 
-string userName = console.ReadLine();
+string userName = Console.ReadLine();
 
 ```
 
