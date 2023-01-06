@@ -24,9 +24,3 @@ string userName = console.ReadLine();
 Do odczytu danych wejściowych od użytkownika używa się metody `Console.ReadLine()`.
 
 W powyższym przykładzie zostanie utworzona zmienna o nazwie `userName` typu `string`, do której zostanie przypisana wartość wprowadzona przez użytkownika.
-
-
-
-
-
-
