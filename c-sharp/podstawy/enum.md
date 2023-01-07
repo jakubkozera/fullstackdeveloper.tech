@@ -25,7 +25,6 @@ enum UserRole {
     Editor = 2,
     Reader = 3
 }
-
  ```
 
  Enum jest stosowany gdy chcemy ograniczyć możliwe wartości jakiejś zmiennej do stałego zbioru wartości i nadać im konkretne nazwy. Dzięki jego zastosowaniu możemy zwiększyć czytelność i zrozumiałość naszegokodu.
