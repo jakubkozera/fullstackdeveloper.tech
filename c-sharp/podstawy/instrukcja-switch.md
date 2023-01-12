@@ -32,7 +32,7 @@ Oprócz tego `switch` również używany do powiązania wartości dla reprezento
 int someNumber = 1;
 string result;
 
-switch(someNumber)
+switch (someNumber)
 {
     case 1:
         result = "one";
