@@ -1,6 +1,6 @@
 # StringBuilder 
 
-`StringBuilder` jest klasą, która pozwala na wydajne modyfikowanie ciągów znaków i znajduje się w przestrzeni nazw `System.Text.`. Jest stosowana, gdy potrzeba wykonać wiele operacji na ciągu znaków, takich jak dodawanie, wstawianie lub usuwanie znaków. Zamiast tworzyć nowy obiekt typu `string` dla każdej operacji, `StringBuilder` modyfikuje swój wewnętrzny bufor, co może poprawić wydajność programu. 
+`StringBuilder` jest klasą, która pozwala na wydajne modyfikowanie ciągów znaków i znajduje się w przestrzeni nazw `System.Text`. Jest stosowana, gdy potrzeba wykonać wiele operacji na ciągu znaków, takich jak dodawanie, wstawianie lub usuwanie znaków. Zamiast tworzyć nowy obiekt typu `string` dla każdej operacji (co spowodowałoby alokacje nowej pamięci, za każdym razem gdy zmieniamy wartość typu `string`), `StringBuilder` modyfikuje swój wewnętrzny bufor, co może poprawić wydajność programu. 
 
 ## Przykład 
 
