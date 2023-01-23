@@ -16,7 +16,7 @@ class RegexExample
     static void Main()
     {
         string phoneNumber = "+48555666777";
-        string pattern = @"^\\+?[1-9][0-9]{7,14}$";
+        string pattern = @"^+?[1-9][0-9]{7,14}$";
 
         bool isPhoneNumber = Regex.IsMatch(phoneNumber, pattern);
 
@@ -27,3 +27,19 @@ class RegexExample
 ```
 
 W tym przykładzie, utworzyliśmy zmienną `phoneNumber` zawierającą przykładowy numer telefonu. Następnie utworzyliśmy zmienną `pattern` zawierającą wzorzec numeru telefonu (w postaci wyrażenia regularnego). Wzorzec ten jest używany przez metodę `IsMatch` klasy `Regex`, aby sprawdzić, czy ciąg tekstowy `phoneNumber` jest zgodny z tym wzorcem. W wyniku tego, zmienna `isPhoneNumber` jest true, ponieważ numer telefonu jest poprawny.
+
+W tym konkretnym przykładzie nasz regex wygląda następująco:
+
+`string pattern = @"^+?[1-9][0-9]{7,14}$";`
+
+Jego logikę dopasowania możemy rozbić następująco:
+
+`^` - sprawdza czy wyrażenie **rozpoczyna się** od konkretnej wartości
+
+`+?` - znak `?` oznacza **opcjonalność**, w tym kontekście opcjonalny jest `+` - czyli niezależnie od tego czy będzie on w wyrażeniu czy nie, zostanie ono dopasowane
+
+`[1-9]` - zakres, który **dopasuje znaki od 1 - 9**, czyli dowolna cyfra oprócz 0 zostanie dopasowana w tym miejscu
+
+`[0-9]{7,14}` - zakres, dopasowujący **dowolne cyfry**, powtarzający się od **7 do 14 razy**
+
+`$` - sprawdza czy wyrażenie **kończy się** na konkrentej wartości
