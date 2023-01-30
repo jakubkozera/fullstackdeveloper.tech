@@ -1,5 +1,9 @@
 # Komentarze i regiony
 
+Tworząc róźnego rodzaju aplikacje, czasem zdaża się potrzeba, aby w pewnien sposób dodać komentarz do pisanego kodu, po to, aby inni developerzy byli w stanie go zrozumieć lepiej, jeżeli sam kod wymaga dodatkowego opisu.
+
+Natomiast dodając dodatkowy opis do kodu, nie chcemy żeby był on brany pod uwagę przez kompilator do utworzenia programu, a przez to musimy to zrobić w konkretny sposób.
+
 ## Komentarze jednoliniowe 
 
 
@@ -41,7 +45,7 @@ Zbyt duża ilość komentarzy zaciemni kod i sprawi, że będzie go ciężej utr
 
 ## Regiony
 
-Regiony to specjalne komentarze wieloliniowe, które pozwalają na grupowanie kodu w logiczne bloki. Służą do organizacji kodu i ułatwiają nawigację po nim. Regiony są tworzone dzięki użyciu słów kluczowych `#region` i `endregion`.
+Regiony to specjalne wieloliniowe bloki kodu, które pozwalają na grupowanie kodu w logiczne bloki. Służą do organizacji kodu i ułatwiają nawigację po nim. Regiony są tworzone dzięki użyciu słów kluczowych `#region` i `endregion`.
 
 ```
 
@@ -62,3 +66,5 @@ class Program
 }
 ```
 W powyższym przykładzie utworzono dwa regiony o nazwach "Zmienne" i "Obliczenia".
+
+ W tym konkretnym przykładzie nie wnoszą one za dużo, ale często, szczególnie przy dużych klasach, warto grupować funkcjonalności, po prostu w celu lepszej czytelności kodu.
