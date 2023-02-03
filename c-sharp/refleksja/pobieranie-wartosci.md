@@ -8,7 +8,7 @@ Refleksja umożliwia pobieranie wartości właściwości i pól obiektów dynami
 using System;
 using System.Reflection;
 
-namespace FirstProject
+namespace DisplayValues
 {
    
     class Program
