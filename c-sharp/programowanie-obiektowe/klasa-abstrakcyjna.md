@@ -1,1 +1,1 @@
-# Tittle
+# Klasa abstrakcyjna

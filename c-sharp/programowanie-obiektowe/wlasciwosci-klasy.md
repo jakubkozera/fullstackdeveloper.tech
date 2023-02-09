@@ -1,1 +1,1 @@
-# Tittle
+# Właściwości klasy
