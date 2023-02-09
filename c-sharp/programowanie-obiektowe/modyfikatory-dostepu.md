@@ -1,6 +1,6 @@
 # Modyfikatory dostępu
 
-todo 
+todo by you
 W języku C# istnieje 4 lub 5 modyfikatorów dostępu: 
 
 1. public
