@@ -7,3 +7,4 @@ Do trzech głównych elementów programowania obiektowego należą:
 - Dziedziczenie
 - Polimorfizm
 - Enkapsulacja
+- Abstrakcja
