@@ -26,7 +26,9 @@ Przykład danych w formacie JSON:
 
 ```
 
-Serializacja JSON oznacza proces konwersji obiektów w języku C# na strumień bajtów możliwy do zapisania w postaci pliku JSON. Natomiast deserializacja to proces odwrotny, czyli konwersja danych z pliku JSON na obiekty w języku C#. Istnieje kilka bibliotek do serializacji i deserializacji JSON, z czego najbardziej popularna to `Newtonsoft.Json`.
+Serializacja JSON oznacza proces konwersji obiektów w języku C# na strumień bajtów możliwy do zapisania w postaci pliku JSON. Natomiast deserializacja to proces odwrotny, czyli konwersja danych z pliku JSON na obiekty w języku C#. 
+
+Istnieje kilka bibliotek do serializacji i deserializacji JSON, z czego najbardziej popularna to `Newtonsoft.Json`.
 
 Za pomocą tej biblioteki, serializację można wykonać za pomocą metody `JsonConvert.SerializeObject`:
 
@@ -53,8 +55,15 @@ var player = new Player()
 string playerSerialized = JsonConvert.SerializeObject(player);
 ```
 
-Deserializacja danych JSON może być wykonana za pomocą metody `JsonConvert.DeserializeObject`:
+Deserializacja danych JSON może być wykonana za pomocą metody `JsonConvert.DeserializeObject`, która jako swój parametr generyczny przyjmuje typ, na który będzie zdeserializowany JSON:
 
 ```
 var player = JsonConvert.DeserializeObject<Player>(json);
 ```
+
+
+## Przypadki użycia JSON
+
+JSON jest popularnym formatem przesyłania danych w aplikacjach .NET. Służy do przesyłania danych pomiędzy aplikacjami w formie tekstowej. Dzięki temu można łatwo wymieniać dane pomiędzy różnymi językami programowania i platformami.
+
+W .NET, JSON jest często używany do komunikacji z serwerami i usługami internetowymi, takimi jak RESTful web services. JSON jest też używany do przechowywania i wymiany danych w aplikacjach mobilnych i w aplikacjach dla przeglądarek.
