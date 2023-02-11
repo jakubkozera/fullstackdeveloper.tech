@@ -41,3 +41,16 @@ class Rectangle : Shape
 W powyższym przykładzie, klasa abstrakcyjna `Shape` definiuje abstrakcyjne metody `Area` i `Perimeter`, które muszą być zaimplementowane przez klasy pochodne. Klasa `Rectangle` dziedziczy z klasy `Shape` i zaimplementowała wymagane metody.
 
 Klasy abstrakcyjne są przydatne w programowaniu, ponieważ pozwalają na stworzenie wspólnego kontraktu dla wielu klas, co umożliwia łatwiejszą implementację i utrzymanie kodu.
+
+Natomiast zastosowanie klas abstrakcyjnych w programach niesie też ze sobą kilka ograniczeń i wad, takich jak:
+
+ - Złożoność: Klasa abstrakcyjna jest bardziej skomplikowana niż zwykła klasa i wymaga dodatkowej wiedzy i umiejętności do prawidłowego zastosowania.
+
+- Dziedziczenie: Klasa abstrakcyjna może być dziedziczona tylko przez jedną klasę pochodną, co może być problematyczne w przypadku bardziej złożonych projektów.
+
+- Ograniczenie funkcjonalności: Klasa abstrakcyjna nie może być utworzona jako obiekt i jest używana tylko jako bazowa klasa dla dziedziczenia.
+
+- Trudność w testowaniu: Klasa abstrakcyjna może być trudna do przetestowania, ponieważ nie można jej użyć jako obiektu i testować jej implementacji, a musi być testowana poprzez testowanie klas pochodnych.
+
+Podsumowując, klasy abstrakcyjne powinny być używane z umiarem i tylko wtedy, gdy jest to naprawdę konieczne w projekcie. W przeciwnym razie może to prowadzić do bardziej skomplikowanego kodu i negatywnie wpłynąć na jego wydajność i łatwość testowania. 
+Najczęstszą alternatywą do klas abstracyjnych są interfejsy, które w większości przypadków są wystarczające, a dodatkowo nie nakładają ograniczeń, jak robi to klasa abstrakcyjna.
