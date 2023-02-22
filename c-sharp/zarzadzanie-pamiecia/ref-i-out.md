@@ -1,8 +1,10 @@
-# Ref i out
+# `ref` i `out`
 
-Zarówno `ref` jak i `out` umożliwiają przekazywanie argumentów przez referencję do metody, jednak istnieją subtelne różnice w ich użyciu.
+Przekazując do metod zmienne typów wartościowych, tak naprawdę operując w metodzie na parametrze, który został przekazany operujemy na kopii wartości, którą sprecyzowaliśmy jako parametr tej metody. Jednak czasem istnieje potrzeba, aby operować na konkretnej referencji danej wartości, aby miec możliwość jej modyfikacji, również poza daną metodą (co nie jest możliwe jeżeli operujemy na kopii wartości).
 
-## Ref
+Zarówno `ref` jak i `out` umożliwiają przekazywanie argumentów przez referencję do metody, jednak istnieją subtelne różnice w ich użyciu. 
+
+## `ref`
 
 Słowo kluczowe `ref` służy do przekazywania argumentów metod przez referencję. Oznacza to, że w przypadku jego użycia jako modyfikatora argumentu, przekazywana jest nie wartość zmiennej, lecz jej referencja w pamięci.
 
@@ -26,7 +28,7 @@ Zmienna `a` zostanie przekazana do metody `Increment` przez referencję, co ozna
 
 Słowo kluczowe `ref` jest przydatne, gdy chcemy, aby zmiany dokonane na argumentach metod były widoczne poza nią, a także gdy chcemy uniknąć kopiowania dużych struktur danych przy przekazywaniu ich jako argumentów metod. Warto jednak zwrócić uwagę, że użycie słowa kluczowego `ref` niesie ze sobą pewne ryzyko i powinno być stosowane ostrożnie, aby uniknąć niepożądanych efektów ubocznych.
 
-## Out
+## `out`
 
 Słowo kluczowe `out` służy do zwracania więcej niż jednej wartości z metody. Umożliwia to przekazanie argumentów przez referencję i ich zmodyfikowanie w ciele metody.
 
