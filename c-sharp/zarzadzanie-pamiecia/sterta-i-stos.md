@@ -1,6 +1,7 @@
 # Stos i sterta
 
-Sterta i stos to dwa różne rodzaje pamięci, które są wykorzystywane w procesie alokacji i zwalniania pamięci.
+Każdy program do swojego poprawnego działa potrzebuje przechowywać dane w pamięci maszyny na której jest wykonywany.
+W .NET'owych aplikacjach mamy dostępne dwa rózne rodzaje pamięci, a konkretnie są to sterta i stos, które są wykorzystywane w procesie alokacji i zwalniania pamięci.
 
 ## Sterta (heap)
 
@@ -15,3 +16,6 @@ Stos to obszar pamięci, w którym przechowywane są zmienne lokalne oraz inform
 Alokacja pamięci na stosie odbywa się automatycznie przy wywoływaniu funkcji, a zwolnienie pamięci następuje automatycznie przy zakończeniu funkcji. Ponieważ stos jest stosunkowo mały i ma stały rozmiar, jego użycie jest zwykle szybsze i efektywniejsze niż stosowanie sterty.
 
 Wadą stosu jest to, że rozmiar stosu jest ograniczony, co oznacza, że funkcje, które używają dużej liczby zmiennych lokalnych lub wywołują wiele funkcji zagnieżdżonych, mogą przekroczyć limit rozmiaru stosu i spowodować przepełnienie stosu (stack overflow).
+
+
+W C# programista nie ma bezpośredniego dostępu do sterty i stosu. Zarządzanie nimi jest dokonywane przez środowisko uruchomieniowe .NET (CLR - Common Language Runtime), które zapewnia mechanizmy alokacji i usuwania obiektów z pamięci oraz automatyczne zarządzanie stosami wywołań funkcji. Jednakże programista może kontrolować sposób alokacji pamięci poprzez wykorzystanie konstrukcji języka takich jak `new`, `ref` czy `out`.
