@@ -1,4 +1,4 @@
-# Const i readonly
+# `const` i `readonly`
 
 Słowo kluczowe `const` służy do deklarowania stałej wartości, która nie może być zmieniona w trakcie działania programu. Słowo kluczowe `readonly` natomiast służy do deklarowania wartości, która może być ustawiona tylko raz, podczas inicjalizacji lub w konstruktorze, i nie może być zmieniona później.
 
@@ -24,7 +24,7 @@ public class MyClass
 
 W tym przykładzie `MyConst` to stała wartość, która jest ustawiona na 10 i nie może być zmieniona w żadnym miejscu w programie. Z kolei `MyReadonly` to wartość typu `readonly`, która może być ustawiona w konstruktorze, ale nie może być zmieniona później.
 
-## Const 
+## `const` 
 
 Użycie `const` gwarantuje, że wartość zmiennej nie będzie modyfikowana w trakcie działania programu, co może przyczynić się do zwiększenia czytelności kodu oraz uniknięcia błędów. Jego użycie jest zalecane w następujących sytuacjach:
 
@@ -56,7 +56,7 @@ Należy zauważyć, że wartości `const` są domyślnie `static`, co oznacza, �
 
 Przykładowo, jeśli mamy klasę `MyClass` z polem `MyConst` zadeklarowanym jako `const`, to odwołując się do niego, możemy napisać `MyClass.MyConst`. Nie ma potrzeby tworzenia instancji klasy `MyClass`, aby uzyskać dostęp do wartości `MyConst`, ponieważ ta wartość jest dostępna dla całej klasy.
 
-## Readonly
+## `readonly`
 
 Zastosowanie `readonly` pozwala na zainicjalizowanie zmiennej tylko raz, zwykle podczas tworzenia obiektu klasy, oraz dalsze operowanie na tej wartości bez możliwości jej zmiany. 
 
