@@ -1,6 +1,6 @@
 # Sortowanie danych
 
-Sortowanie danych można wykonać w bardzo prosty sposób dzięki wykorzystaniu metod z LINQ.
+Sortowanie danych w dowolnej kolekcji można wykonać w bardzo prosty sposób dzięki wykorzystaniu metod z LINQ.
 
 ## Metoda OrderBy
 

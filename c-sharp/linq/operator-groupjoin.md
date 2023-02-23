@@ -1,15 +1,15 @@
 # Metoda GroupJoin 
 
-Metoda `GroupJoin` w LINQ służy do łączenia dwóch sekwencji na podstawie klucza, ale w odróżnieniu od metody `Join`, zachowuje elementy z pierwszej sekwencji, które nie mają dopasowania w drugiej sekwencji. Metoda `GroupJoin` tworzy grupy elementów z pierwszej sekwencji oraz odpowiadających im elementów z drugiej sekwencji w postaci klucz-wartość, gdzie kluczem jest wartość z pierwszej sekwencji, a wartością jest kolekcja elementów z drugiej sekwencji. Wynikiem działania metody `GroupJoin` jest sekwencja wynikowa z elementami, które zawierają klucz z pierwszej sekwencji i kolekcję dopasowanych elementów z drugiej sekwencji lub pustą kolekcję, jeśli brak dopasowania.
+Metoda `GroupJoin` w LINQ służy do łączenia dwóch kolekcji na podstawie klucza, ale w odróżnieniu od metody `Join`, zachowuje elementy z pierwszej kolekcji, które nie mają dopasowania w drugiej kolekcji. Metoda `GroupJoin` tworzy grupy elementów z pierwszej kolekcji oraz odpowiadających im elementów z drugiej kolekcji w postaci klucz-wartość, gdzie kluczem jest wartość z pierwszej kolekcji, a wartością jest kolekcja elementów z drugiej kolekcji. Wynikiem działania metody `GroupJoin` jest sekwencja wynikowa z elementami, które zawierają klucz z pierwszej kolekcji i kolekcję dopasowanych elementów z drugiej kolekcji lub pustą kolekcję, jeśli brak dopasowania.
 
 Metoda `GroupJoin` przyjmuje cztery argumenty:
 
 - drugą sekwencję,
-- klucz z pierwszej sekwencji,
-- klucz z drugiej sekwencji,
+- klucz z pierwszej kolekcji,
+- klucz z drugiej kolekcji,
 - funkcję wyjściową, która tworzy obiekt wynikowy z grupy kluczy i wartości
 
-Metoda `GroupJoin` jest przydatna, gdy chcemy połączyć dwie sekwencje i utworzyć grupy na podstawie kluczy z pierwszej sekwencji, a następnie dla każdej grupy dodać kolekcję elementów z drugiej sekwencji, które pasują do klucza.
+Metoda `GroupJoin` jest przydatna, gdy chcemy połączyć dwie kolekcje i utworzyć grupy na podstawie kluczy z pierwszej kolekcji, a następnie dla każdej grupy dodać kolekcję elementów z drugiej kolekcji, które pasują do klucza.
 
 ## Przykład
 
