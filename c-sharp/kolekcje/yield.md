@@ -26,4 +26,5 @@ W powyższym przykładzie metoda `GetEvenNumbers` zwraca sekwencję liczb parzys
 
 Słowo kluczowe `yield` jest przydatne w przypadku przetwarzania dużych ilości danych lub w sytuacjach, gdy nie jest znana pełna sekwencja wartości z wyprzedzeniem. Iterator umożliwia generowanie kolejnych wartości w miarę potrzeby, co pozwala na bardziej efektywne wykorzystanie zasobów systemowych i pamięci.
 
+## YouTube
 https://www.youtube.com/watch?v=K0bceAr3PgM 

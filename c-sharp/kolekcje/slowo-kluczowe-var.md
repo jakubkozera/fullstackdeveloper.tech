@@ -11,3 +11,6 @@ var myList = new List<int>(); // Zmienna "myList" jest typu List<int>
 ```
 
 > Zmienna zadeklarowana za pomocą słowa kluczowego `var` musi być zainicjalizowana wartością w momencie deklaracji, inaczej program nie skompiluje się.
+
+## YouTube
+https://www.youtube.com/watch?v=jAm-792vipA
