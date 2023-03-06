@@ -1,6 +1,6 @@
 # Lista
 
-Lista to kolekcja danych, która przechowuje elementy tego samego typu. Lista w C# jest implementacją interfejsu `IList<T>`, który definiuje operacje dodawania, usuwania, odczytywania i aktualizacji elementów.
+Lista to kolekcja danych, która przechowuje elementy tego samego typu. Lista w C# jest implementacją interfejsu `IList<T>`, który definiuje operacje dodawania, usuwania, odczytywania i aktualizacji elementów, gdzie typ `T` to dowolnie zdefiniowany przez nas typ.
 
 Aby utworzyć nową listę w C#, należy użyć klasy `List<T>`. Konstruktor klasy `List` przyjmuje opcjonalny argument `capacity`, który określa początkową pojemność listy.
 
