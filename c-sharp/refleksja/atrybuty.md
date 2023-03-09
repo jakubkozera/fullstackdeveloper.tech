@@ -78,3 +78,6 @@ Następnie nałożyliśmy ten atrybut na właściwości `FirstName` i `LastName`
 Warto zauważyć, że aby użyć naszego nowo utworzonego atrybutu, wystarczy posłużyć się nazwą `DisplayProperty` zamiast `DisplayPropertyAttribute`. Kompilator nie wymaga od nas abyśmy posługiwali się pełną nazwą tej klasy, możemy więc pominąć końcówkę `Attribute` przy zastosowaniu atrybutu.
 
 Natomiast samo nałożenie atrybutu na klasę lub właściwości, w żaden sposób **nie zmienia wartości utworzonego obiektu**, a dodaje za to metadane, które można odczytać za pomocą refleksji.
+
+## YouTube
+https://www.youtube.com/watch?v=d-f5IRC2w-Y&t=1772s

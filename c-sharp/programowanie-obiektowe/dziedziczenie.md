@@ -51,3 +51,6 @@ W języku C# istnieją kilka ograniczeń związanych z mechanizmem dziedziczenia
 - Klasa dziedzicząca nie może nadpisać konstruktora nadrzędnej. Konstruktor jest jedyną metodą, która nie może być nadpisana.
 
 - Klasa abstrakcyjna nie może być instancjonowana. Można jedynie tworzyć obiekty klas pochodnych, które ją implementują.
+
+## YouTube
+https://www.youtube.com/watch?v=01hz2-uTB80 

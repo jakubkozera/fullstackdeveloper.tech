@@ -112,3 +112,5 @@ Wyjątki powinny być używane do obsługi błędów w kodzie. W przypadku wyst�
 
 Metody powinny być zgodne z zasadami SOLID, które stanowią fundament programowania obiektowego. Zasady SOLID określają, jak projektować i implementować klasowe struktury, takie jak klasy i metody, aby były elastyczne, łatwe do modyfikowania i utrzymania
 
+## YouTube
+https://www.youtube.com/watch?v=th9wQ2Qmzg8

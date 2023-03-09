@@ -99,3 +99,7 @@ public class Singleton
 ```
 
 W tym przykładzie, klasa `Singleton` jest wzorcem projektowym, który pozwala na utworzenie tylko jednej instancji tej klasy. Konstruktor jest prywatny, aby uniemożliwić tworzenie instancji tej klasy bezpośrednio przez inne klasy lub obiekty. Instancja jest tworzona tylko przez wywołanie właściwości `Instance`, która sprawdza, czy instancja już istnieje, a jeśli nie, to ją tworzy.
+
+
+## YouTube
+https://www.youtube.com/watch?v=DG9eaBBa5u8

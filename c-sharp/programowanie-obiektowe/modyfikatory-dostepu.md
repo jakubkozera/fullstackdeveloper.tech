@@ -107,3 +107,7 @@ Modyfikatory dostępu są bardzo ważnym narzędziem w języku C# i służą do 
 
 ### Podsumowanie
 Modyfikatory dostępu są niezwykle ważnym narzędziem w języku C# i służą do zapewnienia bezpieczeństwa i poprawności programów. Odpowiednie użycie modyfikatorów dostępu pozwala na kontrolowanie dostępu do pól i metod w klasach oraz zapobieganie niepożądanym zmianom w danych.
+
+
+## YouTube
+https://www.youtube.com/watch?v=us2xkpAjwGs

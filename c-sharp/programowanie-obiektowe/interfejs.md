@@ -57,3 +57,6 @@ Podobną funkcjonalność w C# spełniają klasy abstrakcyjne, ale jest między 
 - Konstruktory: Interfejs nie może zawierać żadnych konstruktorów, natomiast klasa abstrakcyjna może zawierać konstruktory i jest w stanie wywołać konstruktor bazowej klasy.
 
 Ogólnie rzecz biorąc, interfejs jest używany do definiowania standardowego zachowania, które musi być implementowane przez różne klasy, natomiast klasa abstrakcyjna jest używana jako bazowa klasa dla dziedziczenia i zawiera implementację części logiki.
+
+## YouTube
+https://www.youtube.com/watch?v=xuTOacvh35M

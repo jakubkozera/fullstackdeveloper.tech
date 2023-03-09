@@ -107,3 +107,6 @@ public class Person
 ```
 
 W powyższym przykładzie klasa Person zawiera właściwość `Name` z użyciem wyrażenia lambda. Wyrażenie lambda w metodzie set zapewnia, że wartość pola `name` nie może być nullem.
+
+## YouTube
+https://www.youtube.com/watch?v=Wboc2rgiNik
