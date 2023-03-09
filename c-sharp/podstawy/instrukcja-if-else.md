@@ -65,3 +65,6 @@ else
 ```
 
 W powyższym przykładzie, zmienna x jest porównywana z wartością 10. Jeśli jest większa, to zostanie wyświetlone "x jest większe niż 10", jeśli jest równa 10, to zostanie wyświetlone "x jest równe 10", a jeśli żaden z tych warunków nie został spełniony to wykonywanie kodu trafi do instrukcji `else` i w konsoli zostanie wypisana wiadomość "x jest mniejsze niż 10" 
+
+ ## YouTube
+https://www.youtube.com/watch?v=yf3FxjDCfqQ 

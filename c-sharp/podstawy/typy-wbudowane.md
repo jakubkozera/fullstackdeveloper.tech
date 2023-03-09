@@ -17,3 +17,7 @@ decimal - reprezentuje liczbę zmiennoprzecinkową o dużej precyzji
 
 
 todo...
+
+
+## YouTube
+https://www.youtube.com/watch?v=9APHzbMQ-so

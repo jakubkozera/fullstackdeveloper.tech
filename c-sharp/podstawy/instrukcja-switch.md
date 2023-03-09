@@ -69,3 +69,6 @@ string result = someNumber switch
 W powyższym przykładzie, `someNumber` jest wyrażeniem, którego wartość jest porównywana z wartościami dostępnymi w poszczególnych gałęziach `case`. Kiedy wartość `someNumber` pasuje do wartości jednego z `case`, zwracana jest wartość po lewej stronie strzałki (=>), która jest przypisywana do result. Słowo kluczowe `_` jest używane jako ostatniego `case` i jest równoważne `default` w tradycyjnym `switchu`.
 
 Jest to bardziej czytelna i krótsza składnia niż tradycyjny `switch-case` i pozwala na łatwe użycie `switch` jako wyrażenia zwracającego wartość.
+
+ ## YouTube
+https://www.youtube.com/watch?v=rJdG0vc3jnY
