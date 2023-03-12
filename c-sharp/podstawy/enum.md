@@ -2,7 +2,7 @@
 
  Enum jest to typ wyliczeniowy, który pozwala na zdefiniowanie zbioru stałych wartości, które mogą zostać przypisane do zmiennej. 
 
- ## Pzykład
+ ## Przykład
 
  ```
 enum UserRole {
