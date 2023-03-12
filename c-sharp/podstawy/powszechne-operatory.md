@@ -9,31 +9,86 @@ Istnieje wiele różnych operatorów, a każdy z nich ma określony priorytet i 
 ## Przykładowe operatory
 
 1. Przypisania: używane do przypisywania wartości do zmiennych lub właściwości. Przykładowo: `=, +=, -=, *=, /=`.
+    ```
+    int i = 1;
+    i+=2; // po tej operacji zmienna i zostanie zwiększona o 2
+    ```
 
-2. Arytmetyczne: używane do wykonywania operacji matematycznych, takich jak dodawanie, odejmowanie, mnożenie i dzielenie. Przykładowo: `+, -, *, /, %`.
+2. Arytmetyczne: używane do wykonywania operacji matematycznych, takich jak dodawanie, odejmowanie, mnożenie i dzielenie. Przykładowo: `+, -, *, /, % (reszta z dzielenia)`.
 
-3. Porównania: używane do porównywania wartości, takich jak równość, nierówność, większość, mniejszość i ich warianty. Przykładowo: `==, !=, >, <, >=, <=`.
+    ```
+    int i = 1;
+    int j = i + 2;
+    ```
+
+3. Porównania: używane do porównywania wartości, takich jak równość, nierówność, większość, mniejszość i ich warianty. Przykładowo: `==, !=, >, <, >=, <=`. Operatory te zwracają wartość logiczną `(bool) [true/false]`
+
+    ```
+    int max = 10;
+    int current = 9;
+
+    bool currentGreaterThanMax = current > max;
+    ```
 
 4. Logiczne: używane do łączenia wyrażeń logicznych i sprawdzania, czy są prawdziwe lub fałszywe. Przykładowo: `&&` (and), `||` (or), `!` (not).
 
-5. Inkrementacji i dekrementacji: używane do zwiększania lub zmniejszania wartości zmiennej o 1. Przykładowo: `++` (inkrementacja), `--` (dekrementacja).
+    Operator `&&` zwróci wartość `true`, jeżeli oba argumenty są równe wartości `true`, w przeciwnym wypadku zwróci wartość `false`.
 
-6. Warunkowe: używane do tworzenia warunkowych wyrażeń, które wykonują różne instrukcje w zależności od wartości logicznej. Przykładowo: `?:` - operator warunkowy ternary, który umożliwia wykonanie instrukcji warunkowej w jednej linii.
+
+    Operator `||` zwróci wartość `true`, jeżeli conajmniej jeden argument jest równy wartości `true`, w przeciwnym wypadku zwróci wartość `false`.
+    ```
+    bool isOverEighteen = false;
+    bool hasParentalApprove = true;
+
+    bool canProceed = isOverEighteen || hasParentalApprove; // true
+    ```
+    Operator `!` zawsze zwraca przeciwną wartość argumentu. Dla wartości `true`, zwróci wartość `false` i vice versa: dla wartości `false`, zwróci wartość `true`;
+
+    ```
+    string status = "Active";
+    bool isNotActive = !(status == "Active"); lub w skróconej formie 'status != "Active"
+
+    ```
+
+
+5. Inkrementacji i dekrementacji: używane do zwiększania lub zmniejszania wartości zmiennej o 1. Przykładowo: `++` (inkrementacja), `--` (dekrementacja). W zależności od pozycji argumentu (przed lub po operatorze) wartość zostanie zmienszona/zwiększona w danej linii, lub dopiero w następnej.
+
+    Przykład **post**-inkrementacji
+    ```
+    int i = 1;
+    i++; // i = 1 (post-inkrementacja, zwiększa wartość w następnej linii)
+    // i = 2
+    ```
+
+    Przykład **pre**-inkrementacji
+    ```
+    int i = 1;
+    ++i; // i = 2 (pre-inkrementacja, zwiększa wartość w danej linii)
+    // i = 2
+    ```
+
+    W analogiczny sposób działa operator deinkrementacji `--`.
+
+6. Warunkowe - operator trójskładnikowy, używany do tworzenia warunkowych wyrażeń, które wykonują różne instrukcje w zależności od wartości logicznej. Operator warunkowy trójskładnikowy (ternary)umożliwia wykonanie instrukcji warunkowej w jednej linii.
 
     ```
     string message = age >= 18 ? "Person is an adult" : "Person is a minor";
     ```
     W tym przykładzie, jeśli `age` jest większe lub równe 18, to zmianna `message` przyjmie wartość "Person is an adult", a jeśli jest mniejsze niż 18, to "Person is a minor".
 
-7. Null-coalescing: używane do ustawiania wartości domyślnej, jeśli zmienna jest równa null. Przykładowo: `??`.
+    Jest to skrócona wersja przypisana wartości `message` z wykorzystaniem instrukcji `if`.
     ```
-    int? age = null;
-    string name = null; 
+    string message;
+    if(age >= 18)
+    {
+        message = "Person is an adult";
+    }
+    else
+    {
+        message = "Person is a minor";
+    }
+    ```
 
-    int defaultAge = age ?? 18; 
-    string defaultName = name ?? "John Doe"; 
-    ```
-    W tym przykładzie `age` to wartość typu nullable, a `name` to typ referencyjny, obie zmienne mają przypisaną wartość `null`. Operator `??` jest używany do przypisania wartości domyślnych do `defaultAge` i `defaultName`. Jeśli `age` lub `name` jest równe `null`, to wartości domyślne 18 i "John Doe" są przypisywane do `defaultAge` i `defaultName` odpowiednio.
 
 
 
