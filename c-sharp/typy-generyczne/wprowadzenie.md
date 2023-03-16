@@ -12,5 +12,43 @@ Oto kilka przykładów typów generycznych w C#:
 
 4. Stos generyczny (`Stack<T>`) - klasa, która reprezentuje stos elementów o typie `T`.
 
+
+## Definicja typów generycznych
+
+Aby zdefiniować własny typ generyczny, będziemy musieli zdefiniować ten typ w specjalnym sytaxie, który wygląda następująco: class `SomeGenericClass<T>`, gdzie tak naprawdę `T`, jest dowolną nazwą typu generycznego i może to być cokolwiek.
+
+W ramach definicji takiej klasy, typ `T` będzię dostępny i możliwy do definicji typów parametrów metod, pól, czy zwracanych wartości.
+
+```
+public class MyGenericClass<T>
+{
+    private T _data;
+
+    public MyGenericClass(T data)
+    {
+        _data = data;
+    }
+
+    public T GetData()
+    {
+        return _data;
+    }
+}
+```
+
+W tym przykładzie zdefiniowaliśmy ogólną klasę o nazwie `MyGenericClass`, która przyjmuje parametr typu `T`. Zdefiniowaliśmy prywatne pole `_data` typu `T` oraz konstruktor, który pobiera parametr typu `T` i przypisuje go do `_data`.
+
+Zdefiniowaliśmy również publiczną metodę `GetData`, która zwraca wartość `_data`.
+
+Korzystając z tej generycznej (ogólnej) klasy, możemy tworzyć instancje, które przechowują dowolne typy danych, na przykład:
+
+```
+var myStringClass = new MyGenericClass<string>("Hello, world!");
+string myString = myStringClass.GetData(); // returns "Hello, world!"
+
+var myIntClass = new MyGenericClass<int>(42);
+int myInt = myIntClass.GetData(); // returns 42
+```
+Jak widać, możemy tworzyć instancje `MyGenericClass`, które przechowują `string`, `int` lub dowolny inny typ, określając odpowiedni parametr typu podczas tworzenia instancji.
 ## YouTube
 https://www.youtube.com/watch?v=6vfC4AmPA4M
