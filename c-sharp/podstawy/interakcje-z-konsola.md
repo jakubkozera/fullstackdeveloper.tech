@@ -34,4 +34,4 @@ W powyższym przykładzie zostanie utworzona zmienna o nazwie `userName` typu `s
 
 ## YouTube
 
-*https://www.youtube.com/watch?v=XXZ64uxg2_g*
+*https://www.youtube.com/watch?v=XXZ64uxg2*
