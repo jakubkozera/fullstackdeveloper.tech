@@ -48,6 +48,6 @@ Oto lista typów wbudowanych w C# i ich przykłady:
     DateTime specifiedDate = new DateTime(2023, 3, 15); // określona data
     ```
 
-## YouTube tst
+## YouTube
 
 *https://www.youtube.com/watch?v=9APHzbMQ-so*
