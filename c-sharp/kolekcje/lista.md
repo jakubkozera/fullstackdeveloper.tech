@@ -45,10 +45,8 @@ Można również utworzyć listę zainicjalizowaną wartościami:
     ```
 
 
-## YouTube
+## YouTube 
 
-<video>https://www.youtube.com/watch?v=9CcOqfEnV2o</video>
+*test*
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ssg8sml3Eak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-![](my_video.mov)
+*https://www.youtube.com/watch?v=Ssg8sml3Eak*
