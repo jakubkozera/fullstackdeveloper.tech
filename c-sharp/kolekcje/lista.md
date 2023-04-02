@@ -47,6 +47,4 @@ Można również utworzyć listę zainicjalizowaną wartościami:
 
 ## YouTube 
 
-*test*
-
-*https://www.youtube.com/watch?v=Ssg8sml3Eak*
+*https://www.youtube.com/watch?v=9CcOqfEnV2o*
