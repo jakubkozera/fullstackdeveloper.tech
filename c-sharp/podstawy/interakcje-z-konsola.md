@@ -33,5 +33,5 @@ Do odczytu danych wejściowych od użytkownika używa się metody `Console.ReadL
 W powyższym przykładzie zostanie utworzona zmienna o nazwie `userName` typu `string`, do której zostanie przypisana wartość wprowadzona przez użytkownika.
 
 ## YouTube
-test
+
 *https://www.youtube.com/watch?v=XXZ64uxg2_g*
