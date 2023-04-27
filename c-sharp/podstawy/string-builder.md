@@ -43,4 +43,5 @@ Na przykład, jeśli masz pętlę, w której każdy przebieg dodaje nowy ciąg z
 Z drugiej strony, jeśli nie planujesz modyfikować ciągu znaków i tylko odczytywać lub przechowywać stały ciąg znaków, `String` jest lepszym wyborem. `String` jest niezmienną klasą, co oznacza, że ​​po utworzeniu ciągu znaków, nie można go zmienić. Jest to przydatne, jeśli chcesz mieć pewność, że ciąg znaków nie zostanie zmieniony przez błąd w kodzie.
 
 ## YouTube
-https://www.youtube.com/watch?v=CIUnlNucU0o
+
+*https://www.youtube.com/watch?v=CIUnlNucU0o*

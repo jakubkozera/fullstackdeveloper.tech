@@ -93,4 +93,5 @@ Istnieje wiele różnych operatorów, a każdy z nich ma określony priorytet i 
 
 
 ## YouTube
-https://www.youtube.com/watch?v=d1ZyKfTAI9s
+
+*https://www.youtube.com/watch?v=d1ZyKfTAI9s*

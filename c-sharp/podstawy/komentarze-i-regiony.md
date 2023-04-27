@@ -70,4 +70,5 @@ W powyższym przykładzie utworzono dwa regiony o nazwach "Zmienne" i "Obliczeni
  W tym konkretnym przykładzie nie wnoszą one za dużo, ale często, szczególnie przy dużych klasach, warto grupować funkcjonalności, po prostu w celu lepszej czytelności kodu.
 
  ## YouTube
- https://www.youtube.com/watch?v=xHDUR9n0zHc
+
+ *https://www.youtube.com/watch?v=xHDUR9n0zHc*
