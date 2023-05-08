@@ -19,3 +19,7 @@ Wadą stosu jest to, że rozmiar stosu jest ograniczony, co oznacza, że funkcje
 
 
 W C# programista nie ma bezpośredniego dostępu do sterty i stosu. Zarządzanie nimi jest dokonywane przez środowisko uruchomieniowe .NET (CLR - Common Language Runtime), które zapewnia mechanizmy alokacji i usuwania obiektów z pamięci oraz automatyczne zarządzanie stosami wywołań funkcji. Jednakże programista może kontrolować sposób alokacji pamięci poprzez wykorzystanie konstrukcji języka takich jak `new`, `ref` czy `out`.
+
+## YouTube
+
+*https://www.youtube.com/watch?v=S_5nsAQMtDo*

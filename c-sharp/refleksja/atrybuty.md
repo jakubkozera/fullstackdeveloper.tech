@@ -80,4 +80,5 @@ Warto zauważyć, że aby użyć naszego nowo utworzonego atrybutu, wystarczy po
 Natomiast samo nałożenie atrybutu na klasę lub właściwości, w żaden sposób **nie zmienia wartości utworzonego obiektu**, a dodaje za to metadane, które można odczytać za pomocą refleksji.
 
 ## YouTube
-https://www.youtube.com/watch?v=d-f5IRC2w-Y&t=1772s
+
+*https://www.youtube.com/watch?v=d-f5IRC2w-Y&t=1772s*

@@ -50,5 +50,7 @@ var myIntClass = new MyGenericClass<int>(42);
 int myInt = myIntClass.GetData(); // returns 42
 ```
 Jak widać, możemy tworzyć instancje `MyGenericClass`, które przechowują `string`, `int` lub dowolny inny typ, określając odpowiedni parametr typu podczas tworzenia instancji.
+
 ## YouTube
-https://www.youtube.com/watch?v=6vfC4AmPA4M
+
+*https://www.youtube.com/watch?v=6vfC4AmPA4M*

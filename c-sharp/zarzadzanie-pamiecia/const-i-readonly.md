@@ -122,3 +122,6 @@ Wartości typu `readonly` są przypisane do konkretnej instancji klasy, a nie do
 
 Przykładowo, jeśli mamy klasę `MyClass` z polem `MyReadonly` zadeklarowanym jako `readonly`, to musimy utworzyć instancję klasy `MyClass`, aby uzyskać dostęp do wartości `MyReadonly`. Możemy uzyskać dostęp do tej wartości za pomocą obiektu klasy, np. `myClassInstance.MyReadonly`, gdzie `myClassInstance` to instancja klasy `MyClass`.
 
+## YouTube
+
+*https://www.youtube.com/watch?v=wWZf4GJZneU*

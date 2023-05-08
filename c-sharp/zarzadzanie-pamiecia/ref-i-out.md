@@ -67,3 +67,7 @@ Słowo kluczowe `out` jest przydatne, gdy musimy zwrócić więcej niż jedną w
 3. Słowo kluczowe `ref` może być użyte do przekazywania argumentów przez referencję do metod, które są metodami wywoływanymi przez wartość (metody rozszerzające). Słowo kluczowe `out` nie może być używane w taki sposób.
 
 4. W przypadku `ref`, argument musi być zainicjalizowany przed przekazaniem go do metody, a zmiana wartości argumentu w ciele metody zmienia również wartość oryginalnej zmiennej przekazanej do metody. W przypadku `out`, argument może nie być zainicjalizowany przed przekazaniem go do metody, a wartość argumentu musi zostać ustawiona w ciele metody i zostanie zwrócona po zakończeniu metody.
+
+## YouTube
+
+*https://www.youtube.com/watch?v=MCvACkJHHU8*
