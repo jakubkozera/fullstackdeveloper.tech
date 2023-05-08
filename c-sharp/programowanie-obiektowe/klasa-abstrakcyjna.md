@@ -56,4 +56,5 @@ Podsumowując, klasy abstrakcyjne powinny być używane z umiarem i tylko wtedy,
 Najczęstszą alternatywą do klas abstracyjnych są interfejsy, które w większości przypadków są wystarczające, a dodatkowo nie nakładają ograniczeń, jak robi to klasa abstrakcyjna.
 
 ## YouTube
-https://www.youtube.com/watch?v=MqJwL1XInng&t=4s
+
+*https://www.youtube.com/watch?v=MqJwL1XInng&t=4s*

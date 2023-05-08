@@ -102,4 +102,5 @@ W tym przykładzie, klasa `Singleton` jest wzorcem projektowym, który pozwala n
 
 
 ## YouTube
-https://www.youtube.com/watch?v=DG9eaBBa5u8
+
+*https://www.youtube.com/watch?v=DG9eaBBa5u8*

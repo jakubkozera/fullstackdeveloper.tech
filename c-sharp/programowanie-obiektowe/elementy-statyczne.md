@@ -68,4 +68,5 @@ Właściwości statyczne w C# można wykorzystać do różnych celów, takich ja
 - Warto pamiętać, że nie należy nadużywać właściwości statycznych, ponieważ mogą one powodować problemy z testowaniem i rozwojem oprogramowania. Dlatego należy używać ich z umiarem i w odpowiednich sytuacjach.
 
 ## YouTube
-https://www.youtube.com/watch?v=Ji7Jz802UZ4
+
+*https://www.youtube.com/watch?v=Ji7Jz802UZ4*

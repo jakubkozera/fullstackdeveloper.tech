@@ -110,4 +110,5 @@ Modyfikatory dostępu są niezwykle ważnym narzędziem w języku C# i służą 
 
 
 ## YouTube
-https://www.youtube.com/watch?v=us2xkpAjwGs
+
+*https://www.youtube.com/watch?v=us2xkpAjwGs*

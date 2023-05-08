@@ -57,4 +57,5 @@ class Program
 W powyższym przykładzie klasa `Shape` jest bazową klasą dla klas `Circle` i `Square`. Klasa `Circle` i `Square` dziedziczą po klasie `Shape` i nadpisują metodę `Draw()`. W funkcji `Main()` tworzone są obiekty `Circle` i `Square`, które są rzutowane na obiekty typu `Shape`. W wyniku tego, przy wywołaniu metody `Draw()` dla tych obiektów, wywoływana jest właściwa implementacja zdefiniowana w klasach `Circle` i `Square`, mimo że są one traktowane jako obiekty typu `Shape`.
 
 ## YouTube
-https://www.youtube.com/watch?v=oWDPGWIMHh0
+
+*https://www.youtube.com/watch?v=oWDPGWIMHh0*

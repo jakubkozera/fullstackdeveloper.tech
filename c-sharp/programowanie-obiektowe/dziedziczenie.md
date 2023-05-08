@@ -53,4 +53,5 @@ W języku C# istnieją kilka ograniczeń związanych z mechanizmem dziedziczenia
 - Klasa abstrakcyjna nie może być instancjonowana. Można jedynie tworzyć obiekty klas pochodnych, które ją implementują.
 
 ## YouTube
-https://www.youtube.com/watch?v=01hz2-uTB80 
+
+*https://www.youtube.com/watch?v=01hz2-uTB80* 

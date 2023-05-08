@@ -16,7 +16,7 @@ public void Hello(string name)
 W tym przykładzie metoda "Hello" przyjmuje jeden argument typu string o nazwie "name" i nie zwraca żadnej wartości. Wywołanie metody wygląda następująco:
 ```
 Hello("John");
-````
+```
 Wynik działania tej metody to "Hello, John".
 
 Natomiast jako, że metody muszą być definiowane wewnątrz klas, to aby je wywołać poza daną klasą, będziemy musieli utworzyć obiekt danego typu.
@@ -41,6 +41,7 @@ public class Program
     }
 }
 ```
+
 ## Przeciążanie metod w C#
 
 W języku C# istnieje możliwość przeciążania metod, czyli definiowania wielu metod o tej samej nazwie, ale o różnych parametrach. W ten sposób można zapewnić większą elastyczność w używaniu metody w zależności od potrzeb programu. Oto przykład przeciążania metody w C#:
@@ -110,7 +111,8 @@ Wyjątki powinny być używane do obsługi błędów w kodzie. W przypadku wyst�
 
 6. Dostosuj metody do zasad SOLID
 
-Metody powinny być zgodne z zasadami SOLID, które stanowią fundament programowania obiektowego. Zasady SOLID określają, jak projektować i implementować klasowe struktury, takie jak klasy i metody, aby były elastyczne, łatwe do modyfikowania i utrzymania
+Metody powinny być zgodne z zasadami SOLID, które stanowią fundament programowania obiektowego. Zasady SOLID określają, jak projektować i implementować klasowe struktury, takie jak klasy i metody, aby były elastyczne, łatwe do modyfikowania i utrzymania.
 
 ## YouTube
-https://www.youtube.com/watch?v=th9wQ2Qmzg8
+
+*https://www.youtube.com/watch?v=th9wQ2Qmzg8*
