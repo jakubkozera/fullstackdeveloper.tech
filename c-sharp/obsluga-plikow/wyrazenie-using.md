@@ -101,3 +101,7 @@ class ExampleClass : IDisposable
 W powyższym przykładzie klasa `ExampleClass` implementuje interfejs `IDisposable`. Metoda `Dispose` jest główną metodą służącą do zwolnienia zasobów, a metoda `Dispose(bool disposing)` jest wirtualną metodą, którą można nadpisać w klasie pochodnej, aby zwolnić dodatkowe zasoby. 
 
 W praktyce, gdy tworzysz obiekt, który zarządza zasobami, takimi jak pliki, połączenia z bazą danych itp., powinieneś implementować interfejs `IDisposable`, aby mieć pewność, że te zasoby zostaną zwolnione, gdy nie będą już potrzebne. Jest to jest ważne, ponieważ niezwolnione zasoby mogą powodować problemy z wydajnością i stabilnością aplikacji lub nawet doprowadzić do wycieku pamięci.
+
+## YouTube 
+
+*https://www.youtube.com/watch?v=Scqq7rqDpnM*

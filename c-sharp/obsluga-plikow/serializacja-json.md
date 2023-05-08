@@ -67,3 +67,7 @@ var player = JsonConvert.DeserializeObject<Player>(json);
 JSON jest popularnym formatem przesyłania danych w aplikacjach .NET. Służy do przesyłania danych pomiędzy aplikacjami w formie tekstowej. Dzięki temu można łatwo wymieniać dane pomiędzy różnymi językami programowania i platformami.
 
 W .NET, JSON jest często używany do komunikacji z serwerami i usługami internetowymi, takimi jak RESTful web services. JSON jest też używany do przechowywania i wymiany danych w aplikacjach mobilnych i w aplikacjach dla przeglądarek.
+
+## YouTube
+
+*https://www.youtube.com/watch?v=RZ5uMSFMDBM*
