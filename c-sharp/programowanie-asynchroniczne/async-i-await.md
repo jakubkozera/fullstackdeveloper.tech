@@ -19,3 +19,6 @@ async Task DownloadFileAsync()
 
 W powyższym przykładzie metoda `DownloadFileAsync` pobiera plik z internetu za pomocą metody `HttpClient.GetAsync`. Następnie wykorzystuje metodę `await`, aby oczekiwać na pobranie pliku. Kiedy pobieranie zostanie zakończone, pobrane dane są zapisywane do pliku.
 
+## YouTube
+
+*https://www.youtube.com/watch?v=LL9GEAY_Dlo*
