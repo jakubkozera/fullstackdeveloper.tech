@@ -25,4 +25,5 @@ Oto kilka zalet korzystania ze słowa kluczowego `var`:
 5. Ułatwienie korzystania z LINQ: Korzystanie z `var` ułatwia korzystanie z LINQ, ponieważ wyrażenia LINQ zwykle zwracają anonimowe typy.
 
 ## YouTube
-https://www.youtube.com/watch?v=jAm-792vipA
+
+*https://www.youtube.com/watch?v=jAm-792vipA*

@@ -37,4 +37,5 @@ Na przykład, aby wyfiltrować listę liczb całkowitych, możemy użyć następ
 Tutaj do metody `Where` (która filtruje kolekcje na podstawie metody zwracającej wartość `true`/`false`, dla każdego z elementów), przekazaliśmy anonimową funkcje za pomocą lambdy, która sprawdzi czy konkretny element kolekcji jest większy od 10.
 
 ## YouTube
-https://www.youtube.com/watch?v=6L6W9L5XgXE 
+
+*https://www.youtube.com/watch?v=6L6W9L5XgXE* 

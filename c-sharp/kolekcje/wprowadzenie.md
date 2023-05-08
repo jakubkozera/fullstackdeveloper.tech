@@ -13,4 +13,5 @@ W języku C# istnieje wiele innych typów kolekcji, w tym `LinkedList`, `SortedL
 Pod generyczny typ `T`, możemy wstawić dowolny typ wbudowany jak np. `int`, `string` czy `DateTime`, ale równie dobrze może to być klasa zdefniowana w ramach naszego programu.
 
 ## YouTube
-https://www.youtube.com/watch?v=iqjdNDrBHRw
+
+*https://www.youtube.com/watch?v=iqjdNDrBHRw*
