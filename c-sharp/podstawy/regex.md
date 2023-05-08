@@ -43,3 +43,7 @@ Jego logikę dopasowania możemy rozbić następująco:
 `[0-9]{7,14}` - zakres, dopasowujący **dowolne cyfry**, powtarzający się od **7 do 14 razy**
 
 `$` - sprawdza czy wyrażenie **kończy się** na konkrentej wartości
+
+## YouTube
+
+*https://www.youtube.com/watch?v=GzfjkmmJRbk*

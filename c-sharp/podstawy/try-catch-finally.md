@@ -43,3 +43,7 @@ Kiedy używać bloku `try-catch-finally` ?
 - komunikacji z zewnętrznymi serwisami
 - połączeniem z bazą danych
 - kiedy odwołujemy się do potęcjalnych referencji `null`, przykładowo filtrując dane, to jeżeli żaden rezultat nie zostanie zwrócony, możemy spodziewać się wyjątku `NullReferenceException` - przy próbie odniesienia się do takiej referencji
+
+## YouTube
+
+*https://www.youtube.com/watch?v=lRFFYTwXMhI*

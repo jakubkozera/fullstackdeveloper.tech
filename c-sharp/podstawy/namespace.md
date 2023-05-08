@@ -37,3 +37,7 @@ namespace GameConsole
 ```
 
 Co więcej, definicja typów (klas, struktur czy enum) musi istnieć wewnątrz jakiegoś `namespace`, kompilator nie zezwoli na utworzenie typu poza nim.
+
+## YouTube
+
+*https://www.youtube.com/watch?v=8nZe6u6CUFw*
