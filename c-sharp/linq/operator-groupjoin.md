@@ -70,3 +70,7 @@ foreach (var department in result)
 ```
 
 Powyższy kod używa metody `GroupJoin` do połączenia list departametów i pracowników na właściwościach `Id` i `DepartmentId`. Wynikiem tego jest lista obiektów typu `Department` oraz listę obiektów `Employee`, które należą do tego działu. Na końcu kod drukuje działy i ich powiązanych pracowników.
+
+## YouTube
+
+*https://www.youtube.com/watch?v=0plHg95D220*
