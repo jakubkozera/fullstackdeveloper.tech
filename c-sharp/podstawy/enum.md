@@ -28,3 +28,7 @@ enum UserRole {
  ```
 
  Enum jest stosowany gdy chcemy ograniczyć możliwe wartości jakiejś zmiennej do stałego zbioru wartości i nadać im konkretne nazwy. Dzięki jego zastosowaniu możemy zwiększyć czytelność i zrozumiałość naszegokodu.
+
+  ## YouTube
+
+*https://www.youtube.com/watch?v=wNpFNZPgRM8*

@@ -1,4 +1,4 @@
-# Kolekcje wprowadzenie
+# Kolekcje - wprowadzenie
 
 W języku C# istnieje wiele rodzajów kolekcji, które służą do przechowywania i zarządzania grupą obiektów. Oto kilka najczęściej używanych typów kolekcji:
 

@@ -57,4 +57,4 @@ Najczęstszą alternatywą do klas abstracyjnych są interfejsy, które w więks
 
 ## YouTube
 
-*https://www.youtube.com/watch?v=MqJwL1XInng&t=4s*
+*https://www.youtube.com/watch?v=MqJwL1XInng*
