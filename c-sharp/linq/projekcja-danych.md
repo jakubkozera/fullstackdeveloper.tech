@@ -101,4 +101,4 @@ Metoda `Select` w C# LINQ jest potężnym narzędziem do przekształcania danych
 
 ## YouTube
 
-*https://www.youtube.com/watch?v=oAr_G12lYdU&t=1523s*
+*https://www.youtube.com/watch?v=oAr_G12lYdU&t=1523*
