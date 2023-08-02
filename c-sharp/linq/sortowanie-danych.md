@@ -57,3 +57,8 @@ foreach (var person in sortedPeople)
 ```
 
 W powyższym przykładzie wykorzystano metodę `OrderBy`, aby posortować dane według wieku, a następnie metodę `ThenBy`, aby posortować dane według nazwiska.
+
+
+## YouTube
+
+https://youtu.be/oAr_G12lYdU?t=2887
