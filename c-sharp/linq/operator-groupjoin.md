@@ -73,4 +73,4 @@ Powyższy kod używa metody `GroupJoin` do połączenia list departametów i pra
 
 ## YouTube
 
-*https://www.youtube.com/watch?v=0plHg95D220*
+*https://www.youtube.com/watch?v=0plHg95D220&t=1977*
