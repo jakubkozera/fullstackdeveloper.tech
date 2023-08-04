@@ -127,4 +127,4 @@ Metody `Take`, `TakeWhile`, `Skip` i `SkipWhile` są prostymi narzędziami do dz
 
 ## YouTube
 
-*https://www.youtube.com/watch?v=oAr_G12lYdU&t=2322s*
+*https://www.youtube.com/watch?v=oAr_G12lYdU&t=2322*
