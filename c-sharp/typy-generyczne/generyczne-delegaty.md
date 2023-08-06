@@ -69,3 +69,8 @@ List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
 List<int> oddNumbers = numbers.FindAll(x => x % 2 != 0);
 ```
 W tym przykładzie delegat Predicate jest używany do określenia warunku filtrowania - tylko liczby nieparzyste są wybierane z listy numbers.
+
+
+## YouTube
+
+*https://www.youtube.com/watch?v=6vfC4AmPA4M&t=2626s*

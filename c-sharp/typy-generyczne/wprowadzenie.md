@@ -53,4 +53,4 @@ Jak widać, możemy tworzyć instancje `MyGenericClass`, które przechowują `st
 
 ## YouTube
 
-*https://www.youtube.com/watch?v=6vfC4AmPA4M*
+*https://www.youtube.com/watch?v=6vfC4AmPA4M&t=63*
