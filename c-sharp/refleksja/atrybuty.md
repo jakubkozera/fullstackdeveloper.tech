@@ -79,6 +79,16 @@ Warto zauważyć, że aby użyć naszego nowo utworzonego atrybutu, wystarczy po
 
 Natomiast samo nałożenie atrybutu na klasę lub właściwości, w żaden sposób **nie zmienia wartości utworzonego obiektu**, a dodaje za to metadane, które można odczytać za pomocą refleksji.
 
+
+## Zastosowanie atrybutów
+
+Atrybutu w kodzie C#, najczęściej będziemy wykorzystywać w następujących sytuacjach:
+- dodanie metadanych do obiektów klas
+- definicja walidacji dla konkretnych właściwości klas
+- konfiguracja serializacji obietków (np. zmienienie domyślnego zachowania serializacji nazwy właściwości)
+- korzystając z róźnych bibliotek, atrybuty będą w stanie odpowiednia dla danej biblioteki konfigurować nasze typy
+
+
 ## YouTube
 
 *https://www.youtube.com/watch?v=d-f5IRC2w-Y&t=1772s*
