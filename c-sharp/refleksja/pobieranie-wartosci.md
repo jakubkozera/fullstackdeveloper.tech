@@ -60,3 +60,16 @@ namespace DisplayValues
 ```
 
 W powyższym przykładzie, stworzyliśmy metodę `Display`, która niezależnie od przyjmowanego typu umożliwia odczytywanie właściwości z klasy i w odpowiedni sposób wypisuje je do konsoli. Korzystając z mechanizmu refleksji byliśmy w stanie odnieść się do każdej właściwości danego typu przy użyciu metody `GetProperties()`, po czym pobraliśmy wartość dla każdej z tych właściwości, dzięki metodzie `GetValue()`. Dodatkowo sprawdziliśmy czy właściwość jest typem prymitywnym lub stringiem, a jeżeli tak, to wypisaliśmy jej wartość do konsoli. 
+
+
+Rezultatem wykonania tej metody będzie następujący wynik w konsoli:
+
+```
+Person:
+FirstName: John
+LastName: Doe
+Address:
+City: Krakow
+PostalCode: 31-556
+Street: Grodzka 5
+```
