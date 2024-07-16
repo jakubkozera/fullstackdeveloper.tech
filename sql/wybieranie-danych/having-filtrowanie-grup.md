@@ -72,10 +72,6 @@ HAVING AVG(ListPrice) > 300
 ```
 
 
-(29 rows affected)
-
-
-
 3\. Znajdź kolory `Color` produktów, które mają miminalną cenę `ListPrice` 30
 
 > 5 rezultatów

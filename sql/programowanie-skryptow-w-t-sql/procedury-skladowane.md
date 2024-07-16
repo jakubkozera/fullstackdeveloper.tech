@@ -149,15 +149,8 @@ PRINT 'Number of updated records: ' + CAST(@UpdatedRecordCount AS NVARCHAR(10));
 ```
 
 
-(1 row affected)
 
-
-
-Number of updated records: 1
-
-
-
-Total execution time: 00:00:00.004
+> Number of updated records: 1
 
 
 ### Modyfikacja implementacji procedury

@@ -36,18 +36,6 @@ SET SubTotal = 550.386
 WHERE SalesOrderID = 71867
 ```
 
-
-(1 row affected)
-
-
-
-(1 row affected)
-
-
-
-Total execution time: 00:00:00.015
-
-
 Dopiero teraz, gdy conajmniej 2 wiersze mają taką samą wartość w kolumnie w klauzuli `ORDER BY`, widzimy róźnice w rezultacie zapytania. W takim przypadku, wynik zależy od kolejności wierszy w tabeli. `RANK` w ten sam sposób sklasiwuje wiersze z taką samą wartością w kolumnie w klauzuli `ORDER BY`, gdzie `ROW_NUMBER` nie robi tego. 
 
 
