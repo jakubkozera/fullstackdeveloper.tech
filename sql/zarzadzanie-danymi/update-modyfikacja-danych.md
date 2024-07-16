@@ -1,4 +1,4 @@
-## UPDATE - modyfikacja danych
+# UPDATE - modyfikacja danych
 
 Aktualizacja danych jest jedną z kluczowych operacji w zarządzaniu bazami danych. Pozwala na zmianę istniejących rekordów w tabelach, co jest niezbędne w dynamicznym środowisku biznesowym. W systemach bazodanowych, takich jak Microsoft SQL Server (MS SQL) istnieje specjalne polecenie `UPDATE`, które umożliwia dokonywanie takich zmian. 
 
@@ -25,8 +25,8 @@ Załóżmy, że chcemy zaktualizować datę urodzenia autora w tabeli `Authors`.
 
 
 ```sql
-UPDATE Authors
-SET BirthDate = '1980-05-15'
+UPDATE Authors
+SET BirthDate = '1980-05-15'
 WHERE AuthorId = 3;
 ```
 
@@ -38,8 +38,8 @@ Jeśli użytkownik zmienia numer telefonu, musimy zaktualizować ten szczegół 
 
 
 ```sql
-UPDATE Users
-SET PhoneNumber = '123-456-789'
+UPDATE Users
+SET PhoneNumber = '123-456-789'
 WHERE UserId = 2;
 ```
 
@@ -49,8 +49,8 @@ Jeśli stan egzemplarza książki się zmienia (na przykład w wyniku naprawy lu
 
 
 ```sql
-UPDATE Copies
-SET Condition = 'Not good'
+UPDATE Copies
+SET Condition = 'Not good'
 WHERE CopyId = 1;
 ```
 
@@ -61,59 +61,53 @@ Przykładowo, jeżeli chcielibyśmy zmodyfikować powiązanie książki, z autor
 
 
 ```sql
-UPDATE Books
-SET AuthorId = a.AuthorId
-FROM Authors a
+UPDATE Books
+SET AuthorId = a.AuthorId
+FROM Authors a
 WHERE Books.BookId = 2 AND a.FirstName = 'Stephen' AND a.LastName = 'King'
 ```
 
-Zauważ, że w klauzuli `FROM` jesteśmy w stanie użyć alias, natomiast w `UPDATE`, juz nie, ale nadal możemy filtorwać wiersze z tabeli `Books`, w klauzuli `WHERE`, specyfikując kolumny pełną nazwą (tabela.kolumna).
-
-Co więcej, jeżeli byłaby potrzeba połączyć wielu tabel, to również możemy wykorzystać klazulę `JOIN`, aby połączyć tabele, a następnie filtrować wiersze w klauzuli `WHERE`.
+Zauważ, że w klauzuli `FROM` jesteśmy w stanie użyć alias, natomiast w `UPDATE`, juz nie, ale nadal możemy filtorwać wiersze z tabeli `Books`, w klauzuli `WHERE`, specyfikując kolumny pełną nazwą (tabela.kolumna).
 
 
-## `UPDATE`, a ograniczenia
-
-Wykonując polecenie `UPDATE`, nadal będą obowiązywały nas ograniczenia zdefiniowane w tabeli, podobnie jak to miało miejsce przy tworzeniu nowych wpisów. Przykładowo, na tabeli `Genres` mieliśmy ograniczenie, które wymagało, aby długość nazwy gatunku była większa niż 2 znaki. W poniższym przykładzie spróbujemy zmienić nazwę gatunku na taką, która przekracza to ograniczenie.
-
+
+Co więcej, jeżeli byłaby potrzeba połączyć wielu tabel, to również możemy wykorzystać klazulę `JOIN`, aby połączyć tabele, a następnie filtrować wiersze w klauzuli `WHERE`.
+
+
+
+## `UPDATE`, a ograniczenia
+
+
+
+Wykonując polecenie `UPDATE`, nadal będą obowiązywały nas ograniczenia zdefiniowane w tabeli, podobnie jak to miało miejsce przy tworzeniu nowych wpisów. Przykładowo, na tabeli `Genres` mieliśmy ograniczenie, które wymagało, aby długość nazwy gatunku była większa niż 2 znaki. W poniższym przykładzie spróbujemy zmienić nazwę gatunku na taką, która przekracza to ograniczenie.
+
+
+
 
 
 
 ```sql
-UPDATE Genres
-SET Name = 'SF'
+UPDATE Genres
+SET Name = 'SF'
 WHERE GenreId = 1
 ```
 
 
 
-
-The statement has been terminated.
-
+Podobny błąd dostaniemy również np. podczas ustawiania klucza obcego, który nie istnieje w tabeli, do której chcemy go przypisać.
 
 
-Total execution time: 00:00:00.001
 
-
-Podobny błąd dostaniemy również np. podczas ustawiania klucza obcego, który nie istnieje w tabeli, do której chcemy go przypisać.
-
 
 
 
 ```sql
-UPDATE Books
-SET AuthorId = 9999
+UPDATE Books
+SET AuthorId = 9999
 WHERE BookId = 2
 ```
 
 
-
-
-The statement has been terminated.
-
-
-
-Total execution time: 00:00:00.002
 
 
 

@@ -1,4 +1,4 @@
-## Instrukcja `GOTO`
+# Instrukcja `GOTO`
 
 Oprócz instrukcji, które w skryptach T-SQL sterują przepływem wykonywania kodu, takimi jak: instrukcja `IF..ELSE`, czy `TRY..CATCH`, mamy również instrukcję `GOTO`, która pozwala na skok do określonego miejsca w kodzie.
 
@@ -8,39 +8,37 @@ Wykorzystując instrukcję `GOTO` w połączeniu z instrukcją `IF`, możemy zai
 
 
 ```sql
-DECLARE @counter INT = 0;
-
-loop: -- etykieta (label)
-SET @counter = @counter + 1;
-PRINT 'Hello World!';
-IF @counter < 5
-BEGIN
-    GOTO loop;
-END
-
+DECLARE @counter INT = 0;
+loop: -- etykieta (label)
+SET @counter = @counter + 1;
+PRINT 'Hello World!';
+IF @counter < 5
+BEGIN
+    GOTO loop;
+END
 ```
 
-Ten prosty mechanizm, możemy np. wykorzystać w celu dodania określonej ilości rekordów do tabeli. Poniższa procedura dodaje do tabeli `Copies`, określoną ilość nowych kopii książki o podanym `BookId`. 
+Ten prosty mechanizm, możemy np. wykorzystać w celu dodania określonej ilości rekordów do tabeli. Poniższa procedura dodaje do tabeli `Copies`, określoną ilość nowych kopii książki o podanym `BookId`. 
+
 
 
 
 ```sql
-CREATE PROCEDURE AddCopies
-    @BookId INT,
-    @Count INT
-AS
-BEGIN
-    DECLARE @i INT = 0;
-add_copies_loop:
-    IF @i < @Count
-    BEGIN
-        INSERT INTO Copies (BookId, Condition) 
-        VALUES (@BookId, 'New');
-        SET @i = @i + 1;
-        GOTO add_copies_loop;
-    END
-END
-
+CREATE PROCEDURE AddCopies
+    @BookId INT,
+    @Count INT
+AS
+BEGIN
+    DECLARE @i INT = 0;
+add_copies_loop:
+    IF @i < @Count
+    BEGIN
+        INSERT INTO Copies (BookId, Condition) 
+        VALUES (@BookId, 'New');
+        SET @i = @i + 1;
+        GOTO add_copies_loop;
+    END
+END
 ```
 
 ### Kiedy używać `GOTO`

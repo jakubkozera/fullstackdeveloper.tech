@@ -1,4 +1,5 @@
-## Modyfikacja struktury
+# Modyfikacja struktury
+
 Poza tworzeniem nowych tabel i relacji między nimi, za pomocą poleceń SQL będziemy też w stanie modyfikować już istniejące struktury. Przykładowo, kiedy będziemy mieli potrzebę dodania nowej kolumny do tabeli, zmiany typu kolumny, usunięcia kolumny, zmiany nazwy kolumny, zmiany nazwy tabeli, usunięcia tabeli, dodania nowej relacji, itp.
 ### Dodawanie nowej kolumny
 Jak już widzieliśmy na poprzednich przykładach aby dodać nową kolumnę do istniejącej tabeli, używamy polecenia `ALTER TABLE` z klauzulą `ADD`.
@@ -56,45 +57,39 @@ DROP TABLE table_name;
 
 
 ```sql
--- UTWORZENIE TABELI
-
-CREATE TABLE Samples  (
-	SampleId INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(50),
-)
-
--- DODANIE KOLUMNY
-ALTER TABLE Samples
-ADD BookId INT;
-
--- DODANIE FK
-ALTER TABLE Samples
-ADD CONSTRAINT FK_Samples_Books
-FOREIGN KEY (BookId) REFERENCES Books(BookId);
-
-
--- USUNIĘCIE FK
-ALTER TABLE Samples
-DROP CONSTRAINT FK_Samples_Books;
-
-
--- ZMIANA NAZWY KOLUMNY
-EXEC sp_rename 'Samples.Name',  'NewName', 'COLUMN';
-
-
--- ZMIANA TYPU DANYCH KOLUMNY
-ALTER TABLE Samples
-ALTER COLUMN [NewName] NVARCHAR(100);
-
-
--- USUNIĘCIU KOLUMNY
-ALTER TABLE Samples
-DROP COLUMN [NewName];
-
-
--- ZMIANA NAZWY TABELI
-EXEC sp_rename 'Samples', 'NewSamples';
-
--- USUNUNIĘCIE TABELI
+-- UTWORZENIE TABELI
+CREATE TABLE Samples  (
+	SampleId INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(50),
+)
+
+-- DODANIE KOLUMNY
+ALTER TABLE Samples
+ADD BookId INT;
+
+-- DODANIE FK
+ALTER TABLE Samples
+ADD CONSTRAINT FK_Samples_Books
+FOREIGN KEY (BookId) REFERENCES Books(BookId);
+
+-- USUNIĘCIE FK
+ALTER TABLE Samples
+DROP CONSTRAINT FK_Samples_Books;
+
+-- ZMIANA NAZWY KOLUMNY
+EXEC sp_rename 'Samples.Name',  'NewName', 'COLUMN';
+
+-- ZMIANA TYPU DANYCH KOLUMNY
+ALTER TABLE Samples
+ALTER COLUMN [NewName] NVARCHAR(100);
+
+-- USUNIĘCIU KOLUMNY
+ALTER TABLE Samples
+DROP COLUMN [NewName];
+
+-- ZMIANA NAZWY TABELI
+EXEC sp_rename 'Samples', 'NewSamples';
+
+-- USUNUNIĘCIE TABELI
 DROP TABLE NewSamples;
 ```

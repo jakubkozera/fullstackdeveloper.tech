@@ -1,4 +1,4 @@
-## Relacje między tabelami
+# Relacje między tabelami
 
 W Microsoft SQL Server istnieją różne typy relacji, które mogą być definiowane między tabelami. Relacje te są używane do określenia sposobu, w jaki dane w jednej tabeli są powiązane z danymi w innej tabeli. Relacje te są zwykle definiowane za pomocą kluczy obcych, które są kluczami głównymi w innej tabeli. Klucze obce są używane do zapewnienia spójności danych między tabelami i zapobiegania wprowadzaniu błędnych danych.
 
@@ -207,56 +207,50 @@ Następnie utworz poniższe relacje:
 
 
 ```sql
--- ROZWIĄZANIE
-
-CREATE TABLE Addresses (
-    AddressId INT PRIMARY KEY IDENTITY(1,1),
-    City NVARCHAR(50) NOT NULL,
-    Street NVARCHAR(50) NOT NULL,
-    HouseNumber NVARCHAR(10) NOT NULL,
-    Country NVARCHAR(50) NOT NULL,
-)
-
-CREATE TABLE Users (
-    UserId INT PRIMARY KEY IDENTITY(1,1),
-    Name NVARCHAR(50) NOT NULL,
-    Surname NVARCHAR(50) NOT NULL,
-    Email NVARCHAR(50) NOT NULL,
-    PhoneNumber NVARCHAR(25),
-    AddressId INT,
-    CONSTRAINT FK_Users_Addresses FOREIGN KEY (AddressId) REFERENCES Addresses(AddressId) 
-)
-
-
-ALTER TABLE Books
-ADD AuthorId INT;
-
-ALTER TABLE Books
-ADD CONSTRAINT FK_Books_Authors FOREIGN KEY (AuthorId) REFERENCES Authors(AuthorId);
-
-
-ALTER TABLE Books
-ADD GenreId INT NOT NULL;
-
-ALTER TABLE Books
-ADD CONSTRAINT FK_Books_Genres FOREIGN KEY (GenreId) REFERENCES Genres(GenreId);
-
-
-ALTER TABLE Copies
-ADD BookId INT NOT NULL;
-
-ALTER TABLE Copies
-ADD CONSTRAINT FK_Copies_Books FOREIGN KEY (BookId) REFERENCES Books(BookId);
-
-
-CREATE TABLE Loans (
-    LoanId INT PRIMARY KEY IDENTITY(1,1),
-    UserId INT NOT NULL,
-    CopyId INT NOT NULL,
-    LoanDate DATETIME2 NOT NULL,
-    ReturnDate DATETIME2 NULL,
-    CONSTRAINT FK_Loans_Users FOREIGN KEY (UserId) REFERENCES Users(UserId),
-    CONSTRAINT FK_Loans_Copies FOREIGN KEY (CopyId) REFERENCES Copies(CopyId),
-
+-- ROZWIĄZANIE
+CREATE TABLE Addresses (
+    AddressId INT PRIMARY KEY IDENTITY(1,1),
+    City NVARCHAR(50) NOT NULL,
+    Street NVARCHAR(50) NOT NULL,
+    HouseNumber NVARCHAR(10) NOT NULL,
+    Country NVARCHAR(50) NOT NULL,
+)
+
+CREATE TABLE Users (
+    UserId INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(50) NOT NULL,
+    Surname NVARCHAR(50) NOT NULL,
+    Email NVARCHAR(50) NOT NULL,
+    PhoneNumber NVARCHAR(25),
+    AddressId INT,
+    CONSTRAINT FK_Users_Addresses FOREIGN KEY (AddressId) REFERENCES Addresses(AddressId) 
+)
+
+ALTER TABLE Books
+ADD AuthorId INT;
+
+ALTER TABLE Books
+ADD CONSTRAINT FK_Books_Authors FOREIGN KEY (AuthorId) REFERENCES Authors(AuthorId);
+
+ALTER TABLE Books
+ADD GenreId INT NOT NULL;
+
+ALTER TABLE Books
+ADD CONSTRAINT FK_Books_Genres FOREIGN KEY (GenreId) REFERENCES Genres(GenreId);
+
+ALTER TABLE Copies
+ADD BookId INT NOT NULL;
+
+ALTER TABLE Copies
+ADD CONSTRAINT FK_Copies_Books FOREIGN KEY (BookId) REFERENCES Books(BookId);
+
+CREATE TABLE Loans (
+    LoanId INT PRIMARY KEY IDENTITY(1,1),
+    UserId INT NOT NULL,
+    CopyId INT NOT NULL,
+    LoanDate DATETIME2 NOT NULL,
+    ReturnDate DATETIME2 NULL,
+    CONSTRAINT FK_Loans_Users FOREIGN KEY (UserId) REFERENCES Users(UserId),
+    CONSTRAINT FK_Loans_Copies FOREIGN KEY (CopyId) REFERENCES Copies(CopyId),
 )
 ```

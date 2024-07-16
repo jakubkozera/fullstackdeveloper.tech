@@ -1,4 +1,4 @@
-## Tabele w bazie danych
+# Tabele w bazie danych
 
 Tabela jest strukturą danych, która przechowuje informacje w formie wierszy i kolumn. Każda tabela składa się z nazwanych kolumn, które określają typy danych, jakie mogą być przechowywane w danej kolumnie, oraz rzeczywistych danych, które są przechowywane w wierszach tabeli.
 
@@ -47,40 +47,44 @@ Tabela `Authors`
 
 
 ```sql
-CREATE TABLE Authors (
-    AuthorId INT PRIMARY KEY IDENTITY(1,1),
-    FirstName NVARCHAR(50) NOT NULL,
-    LastName NVARCHAR(50) NOT NULL,
-    BirthDate DATE,
-    Country NVARCHAR(50)
+CREATE TABLE Authors (
+    AuthorId INT PRIMARY KEY IDENTITY(1,1),
+    FirstName NVARCHAR(50) NOT NULL,
+    LastName NVARCHAR(50) NOT NULL,
+    BirthDate DATE,
+    Country NVARCHAR(50)
 );
 ```
 
-Kolumna `AuthorId` jest kluczem głównym w tej tabeli, a to zapewni nam unikalność wierszy. Co więcej klucz główny przez właściwość `IDENTITY(1,1)` będzie automatycznie inkrementowany, co oznacza, że nie musimy go wypełniać podczas dodawania nowego wiersza. 
-
+Kolumna `AuthorId` jest kluczem głównym w tej tabeli, a to zapewni nam unikalność wierszy. Co więcej klucz główny przez właściwość `IDENTITY(1,1)` będzie automatycznie inkrementowany, co oznacza, że nie musimy go wypełniać podczas dodawania nowego wiersza. 
+
+
+
 Stwórzmy też pozostałe tabele, jeszcze bez kluczy obcych, które dodamy później.
 
 
 ```sql
-CREATE TABLE Genres (
-    GenreId INT PRIMARY KEY IDENTITY(1,1),
-    [Name] NVARCHAR(50) NOT NULL
-);
-
-CREATE TABLE Books (
-    [BookId] INT PRIMARY KEY IDENTITY(1,1),
-    [Title] NVARCHAR(255) NOT NULL,
-    [Description] NVARCHAR(255) NULL,
-    [PublicationDate] DATE,
-    [ISBN] VARCHAR(20) NOT NULL
-);
-
-CREATE TABLE Copies (
-    CopyId INT PRIMARY KEY IDENTITY(1,1),
-    Condition NVARCHAR(100),
+CREATE TABLE Genres (
+    GenreId INT PRIMARY KEY IDENTITY(1,1),
+    [Name] NVARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Books (
+    [BookId] INT PRIMARY KEY IDENTITY(1,1),
+    [Title] NVARCHAR(255) NOT NULL,
+    [Description] NVARCHAR(255) NULL,
+    [PublicationDate] DATE,
+    [ISBN] VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE Copies (
+    CopyId INT PRIMARY KEY IDENTITY(1,1),
+    Condition NVARCHAR(100),
 );
 ```
 
-Zwróć uwagę, że nazwy kolumn możemy definiować w nawiasach kwadratowych, ale nie jest to konieczne.
-
+Zwróć uwagę, że nazwy kolumn możemy definiować w nawiasach kwadratowych, ale nie jest to konieczne.
+
+
+
 

@@ -1,4 +1,4 @@
-## Plan wykonania
+# Plan wykonania
 
 Plan wykonania w MS SQL (Execution Plan) to szczegółowa analiza, jak silnik bazy danych SQL Server wykonuje zapytanie SQL. Jest to zestaw kroków, które SQL Server podejmuje, aby uzyskać dane z bazy danych. Plan wykonania może pomóc zrozumieć, dlaczego dane zapytanie działa szybko lub wolno, oraz zidentyfikować potencjalne problemy z wydajnością.
 
@@ -131,7 +131,6 @@ GROUP BY c.SalesPerson, pc.Name
 Zapytanie 2, z użyciem funkcji okna:
 
 ```
-
 SELECT DISTINCT 
     c.SalesPerson,
     pc.Name AS CategoryName,

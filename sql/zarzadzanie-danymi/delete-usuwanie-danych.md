@@ -1,4 +1,4 @@
-## `DELETE` - usuwanie danych
+# `DELETE` - usuwanie danych
 
 Poza dodawaniem i modyfikowaniem danych, dane możemy też usuwać z tabel.
 
@@ -77,44 +77,16 @@ Tak więc, żeby usunać rekord z dowolnej tabeli, który jest powiązany z inny
 
 
 ```sql
-SELECT * 
-FROM Addresses
-
-SELECT *
+SELECT * 
+FROM Addresses
+SELECT *
 FROM Users
 ```
 
 
-(1 row affected)
-
-
-
-(2 rows affected)
-
-
-
-Total execution time: 00:00:00.012
-
-
-
-
-
-<table><tr><th>AddressId</th><th>City</th><th>Street</th><th>HouseNumber</th><th>Country</th></tr><tr><td>2</td><td>London</td><td>Oxford Street</td><td>34</td><td>UK</td></tr></table>
-
-
-
-
-
-
-<table><tr><th>UserId</th><th>Name</th><th>Surname</th><th>Email</th><th>PhoneNumber</th><th>AddressId</th></tr><tr><td>1</td><td>Emma</td><td>Johnson</td><td>emma.johnson@example.com</td><td>343-456-789</td><td>NULL</td></tr><tr><td>2</td><td>Michael</td><td>Brown</td><td>michael.brown@example.com</td><td>343-456-789</td><td>2</td></tr></table>
-
-
-
-
 ```sql
--- PRÓBA USUNIĘCIA WPISÓW Z TABELI ADDRESSES, Z KTÓRYM POWIĄZANY JEST REKORD Z TABELI USERS
-
-DELETE FROM Addresses
+-- PRÓBA USUNIĘCIA WPISÓW Z TABELI ADDRESSES, Z KTÓRYM POWIĄZANY JEST REKORD Z TABELI USERS
+DELETE FROM Addresses
 WHERE Country = 'USA'
 ```
 
@@ -123,58 +95,30 @@ WHERE Country = 'USA'
 
 The statement has been terminated.
 
-
-
-Total execution time: 00:00:00.002
 
 
 Przykładowe rozwiązanie problemu z ustawieniem wartości `NULL` dla kolumny `AddressId` w tabeli `Users`
 
 
 ```sql
-UPDATE Users
-SET AddressId = NULL
-WHERE AddressId IN (SELECT AddressId FROM Addresses WHERE Country = 'USA')
-
-DELETE FROM Addresses
+UPDATE Users
+SET AddressId = NULL
+WHERE AddressId IN (SELECT AddressId FROM Addresses WHERE Country = 'USA')
+DELETE FROM Addresses
 WHERE Country = 'USA'
 ```
 
-
-(1 row affected)
-
-
-
-(1 row affected)
-
-
-
-Total execution time: 00:00:00.005
 
 
 Innym podejściem byłoby najpierw usunięcie powiązanych rekordów z tabeli `Users` - o ile inne referencje nie zablokują operacji.
 
 
 ```sql
-DELETE Users
-WHERE AddressId IN (SELECT AddressId FROM Addresses WHERE Country = 'UK')
-
-DELETE FROM Addresses
+DELETE Users
+WHERE AddressId IN (SELECT AddressId FROM Addresses WHERE Country = 'UK')
+DELETE FROM Addresses
 WHERE Country = 'UK'
 ```
 
 
-
-
-The statement has been terminated.
-
-
-
-
-
-The statement has been terminated.
-
-
-
-Total execution time: 00:00:00.004
 

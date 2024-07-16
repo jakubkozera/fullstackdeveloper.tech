@@ -1,4 +1,4 @@
-## Podzapytania (sub-queries)
+# Podzapytania (sub-queries)
 
 Zapytania zagnieżdżone, zwane także podzapytaniami lub sub-query, to zapytania SQL umieszczone wewnątrz innego zapytania SQL. Podzapytanie może być używane w różnych częściach zapytania głównego, takich jak warunek WHERE, klauzula FROM, czy też SELECT. Mają one wpływ na wykonanie zapytania poprzez dostarczenie wyniku, który jest używany jako filtr lub kolumna w głównym zapytaniu.
 
@@ -14,11 +14,11 @@ Przykładowo, aby zwrócić produkty, które mają cene powyżej średniej ceny 
 
 
 ```sql
-SELECT Name, ListPrice
-FROM SalesLT.Product
-WHERE ListPrice > (
-    SELECT AVG(ListPrice)
-    FROM SalesLT.Product
+SELECT Name, ListPrice
+FROM SalesLT.Product
+WHERE ListPrice > (
+    SELECT AVG(ListPrice)
+    FROM SalesLT.Product
 )
 ```
 
@@ -34,71 +34,78 @@ WHERE ProductID NOT IN (
 );
 ```
 
-Subqueries mają też zastosowanie w ramach klauzuli `SELECT`, aby zwrócić wynik z jednego zapytania, które jest używane jako część innego zapytania. W takim przypadku zapytanie zagnieżdżone jest wykonywane dla każdego wiersza zwróconego przez zapytanie zewnętrzne.
-
+Subqueries mają też zastosowanie w ramach klauzuli `SELECT`, aby zwrócić wynik z jednego zapytania, które jest używane jako część innego zapytania. W takim przypadku zapytanie zagnieżdżone jest wykonywane dla każdego wiersza zwróconego przez zapytanie zewnętrzne.
+
+
+
 Przykładowo, zapytanie wyświetlające liczbę produktów dla każdej kategorii (bez grupowania):
 
 
 ```sql
-SELECT pc.Name AS Category, (SELECT COUNT(*) FROM SalesLT.Product AS p WHERE p.ProductCategoryID = pc.ProductCategoryID) AS ProductCount
-FROM SalesLT.ProductCategory pc
-
+SELECT pc.Name AS Category, (SELECT COUNT(*) FROM SalesLT.Product AS p WHERE p.ProductCategoryID = pc.ProductCategoryID) AS ProductCount
+FROM SalesLT.ProductCategory pc
 ```
 
 Czy też, zapytanie wyświetlające nazwę kategorii produktu oraz najdroższy produkt w każdej kategorii:
 
 
 ```sql
-    SELECT pc.Name AS Category, 
-           (SELECT TOP 1 Name 
-            FROM SalesLT.Product AS p 
-            WHERE p.ProductCategoryID = pc.ProductCategoryID 
-            ORDER BY ListPrice DESC) AS MostExpensiveProduct
-    FROM SalesLT.ProductCategory AS pc
-
+    SELECT pc.Name AS Category, 
+           (SELECT TOP 1 Name 
+            FROM SalesLT.Product AS p 
+            WHERE p.ProductCategoryID = pc.ProductCategoryID 
+            ORDER BY ListPrice DESC) AS MostExpensiveProduct
+    FROM SalesLT.ProductCategory AS pc
 ```
 
-Podzapytania można też zagnieżdżać, co pozwala na bardziej złożone zapytania. Jeżeli w poprzednim przykładzie, chcielibyśmy zwrócić tylko te wiersze, których wartość `MostExpensiveProduct` nie jest `NULL`, to nie jesteśmy w stanie tego zrobić po prostu dodając warunek `WHERE MostExpensiveProduct IS NOT NULL`, ponieważ jest to wartość obliczana w podzapytaniu. Możemy jednak zrobić to w następujący sposób, tworząc zapytanie zagnieżdżone w ramach klauzuli `FROM`:
-
-
+Podzapytania można też zagnieżdżać, co pozwala na bardziej złożone zapytania. Jeżeli w poprzednim przykładzie, chcielibyśmy zwrócić tylko te wiersze, których wartość `MostExpensiveProduct` nie jest `NULL`, to nie jesteśmy w stanie tego zrobić po prostu dodając warunek `WHERE MostExpensiveProduct IS NOT NULL`, ponieważ jest to wartość obliczana w podzapytaniu. Możemy jednak zrobić to w następujący sposób, tworząc zapytanie zagnieżdżone w ramach klauzuli `FROM`:
+
+
+
+
+
 
 
 
 ```sql
-SELECT Category, MostExpensiveProduct
-FROM (
-    SELECT pc.Name AS Category, 
-           (SELECT TOP 1 Name 
-            FROM SalesLT.Product AS p 
-            WHERE p.ProductCategoryID = pc.ProductCategoryID 
-            ORDER BY ListPrice DESC) AS MostExpensiveProduct
-    FROM SalesLT.ProductCategory AS pc
-) AS subquery
-WHERE MostExpensiveProduct IS NOT NULL
-
+SELECT Category, MostExpensiveProduct
+FROM (
+    SELECT pc.Name AS Category, 
+           (SELECT TOP 1 Name 
+            FROM SalesLT.Product AS p 
+            WHERE p.ProductCategoryID = pc.ProductCategoryID 
+            ORDER BY ListPrice DESC) AS MostExpensiveProduct
+    FROM SalesLT.ProductCategory AS pc
+) AS subquery
+WHERE MostExpensiveProduct IS NOT NULL
 ```
 
 Zauważ, że korzystając z subquery w ramach klauzuli `FROM` musimy zawsze nadać alias dla tej subquery. W przeciwnym razie otrzymamy błąd.
 
-Podzapytania możemy też wykorzystać w ramach klauzuli `JOIN`, co pozwala na bardziej złożone zapytania.
-
-Tutaj podobnie jak w klauzuli `FROM`, będziemy musieli nadać alias podzapytaniu, aby móc się do niego odwołać w klauzuli `JOIN`.
-
- W poniższym przykładzie wykorzystamy podzapytanie wyświetlające nazwę kategorii produktu oraz najdroższy produkt w każdej kategorii:
-
+Podzapytania możemy też wykorzystać w ramach klauzuli `JOIN`, co pozwala na bardziej złożone zapytania.
+
+
+
+Tutaj podobnie jak w klauzuli `FROM`, będziemy musieli nadać alias podzapytaniu, aby móc się do niego odwołać w klauzuli `JOIN`.
+
+
+
+ W poniższym przykładzie wykorzystamy podzapytanie wyświetlające nazwę kategorii produktu oraz najdroższy produkt w każdej kategorii:
+
+
+
 
 
 
 ```sql
-SELECT pc.Name AS Category, p.Name AS MostExpensiveProduct
-FROM SalesLT.ProductCategory AS pc
-JOIN (
-    SELECT ProductCategoryID, MAX(ListPrice) AS MaxPrice
-    FROM SalesLT.Product
-    GROUP BY ProductCategoryID
-) AS subquery ON pc.ProductCategoryID = subquery.ProductCategoryID
-JOIN SalesLT.Product AS p ON subquery.ProductCategoryID = p.ProductCategoryID AND subquery.MaxPrice = p.ListPrice;
-
+SELECT pc.Name AS Category, p.Name AS MostExpensiveProduct
+FROM SalesLT.ProductCategory AS pc
+JOIN (
+    SELECT ProductCategoryID, MAX(ListPrice) AS MaxPrice
+    FROM SalesLT.Product
+    GROUP BY ProductCategoryID
+) AS subquery ON pc.ProductCategoryID = subquery.ProductCategoryID
+JOIN SalesLT.Product AS p ON subquery.ProductCategoryID = p.ProductCategoryID AND subquery.MaxPrice = p.ListPrice;
 ```
 
 ## Wpływ subqueries na wydajność zapytania w bazie danych

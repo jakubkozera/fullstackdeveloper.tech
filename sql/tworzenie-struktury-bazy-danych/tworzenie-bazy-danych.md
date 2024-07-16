@@ -1,4 +1,4 @@
-## Tworzenie bazy danych
+# Tworzenie bazy danych
 
 Jak już wiemy na pojedyńczym serwerze MS SQL możemy tworzyć dowolną ilość instancji baz danych. Aktualnie mamy jedną instancję, która była przez nas zaimportowana i jest to instancja `AdventureWorksLT2017`. Aby utworzyć nową bazę danych, możemy albo skorzystać z GUI Azure Data Studio, albo zapytań SQL.
 

@@ -1,4 +1,4 @@
-## Typy danych
+# Typy danych
 Typy danych w kontekście baz danych określają rodzaj danych, które mogą być przechowywane w określonym polu w tabeli bazy danych. Każdy typ danych ma swoje własne cechy, takie jak zakres wartości, wymagana ilość pamięci, sposób sortowania itp. Typy danych pomagają bazie danych w interpretacji i przechowywaniu informacji zgodnie z ich właściwościami.
 Oto kilka kluczowych cech typów danych w bazach danych:
 1. **Zakres wartości**: Określa, jakie wartości mogą być przechowywane w danym polu, na przykład liczby całkowite, łańcuchy znaków, daty itp.

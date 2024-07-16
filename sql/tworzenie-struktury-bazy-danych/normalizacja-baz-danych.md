@@ -1,4 +1,4 @@
-## Normalizacja baz danych
+# Normalizacja baz danych
 
 **Normalizacja** to proces organizowania danych w bazie danych. Obejmuje on tworzenie tabel i ustanawianie relacji między nimi zgodnie z regułami, które mają na celu ochronę danych i zwiększenie elastyczności bazy danych poprzez eliminowanie nadmiarowości oraz niespójnych zależności. Nadmiarowe dane zajmują dodatkowe miejsce na dysku i przyczyniają się do problemów z utrzymywaniem spójności. Gdy trzeba zmienić dane istniejące w więcej niż jednym miejscu, wszystkie te lokalizacje muszą być zmienione w ten sam sposób. Na przykład zmiana adresu klienta jest łatwiejsza, jeśli te dane są przechowywane tylko w tabeli **Customers** i nigdzie indziej w bazie danych. Niespójne zależności oznaczają, że dane są zależne od nieodpowiednich informacji. Na przykład, podczas gdy adres klienta powinien znajdować się w tabeli **Customers**, wynagrodzenie pracownika obsługującego tego klienta powinno znajdować się w tabeli **Employees**, ponieważ jest zależne od pracownika.
 

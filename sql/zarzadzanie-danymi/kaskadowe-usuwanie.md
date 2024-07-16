@@ -1,4 +1,5 @@
-## Kaskadowe usuwanie
+# Kaskadowe usuwanie
+
 Jak już się przekonaliśmy, aby usunąc wiersze z tabeli, które są powiązane kluczem obcym wierszami z innej tabeli, musimy najpierw usunąć te powiązane wiersze. W przypadku, gdy te powiązane wiersze również mają powiązania z innymi wierszami, musimy usunąć te wiersze, aż dojedziemy do wierszy, które nie mają powiązań z innymi wierszami.
 W takim przypadku w MS SQL możemy skorzystać z kaskadowego usuwania. Kaskadowe usuwanie to mechanizm, który automatycznie usuwa powiązane wiersze z innych tabel, gdy usuwamy wiersz z danej tabeli.
 ## Kaskodowe zachowania

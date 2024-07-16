@@ -1,4 +1,4 @@
-## Ograniczenia (`Constraint`s)
+# Ograniczenia (`Constraint`s)
 
 Ograniczenia w bazie danych Microsoft SQL Server to reguły lub warunki, które można narzucić na dane przechowywane w tabelach, aby zapewnić integralność danych i uniknąć błędów.
 
@@ -147,5 +147,4 @@ Aby dodać ograniczenie `FOREIGN KEY` do kolumny, użyj polecenia `ALTER TABLE` 
 ALTER TABLE table_name
 ADD CONSTRAINT constraint_name FOREIGN KEY (column_name)
 REFERENCES other_table_name (other_column_name);
-
 ```

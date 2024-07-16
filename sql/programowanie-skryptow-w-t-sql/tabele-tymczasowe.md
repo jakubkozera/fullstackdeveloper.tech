@@ -1,4 +1,4 @@
-## Tabele tymczasowe
+# Tabele tymczasowe
 
 Pisząc róźnego rodzaju skrypty w SQL, czasem zdaży się, że potrzebujemy stworzyć tabelę tymczasową, która będzie przechowywać dane tymczasowo, podobnie jak robiły to zmienne zdefiniowane jako: `DECLARE @Zmienna <typ> = <wartość>`, z tym, że tabela tymczasowana jest w stanie przechowywać wiele wierszy, dla wielu kolumn jednocześnie.
 
@@ -51,117 +51,58 @@ Załóżmy, że mamy liste państw, dla których chcielibyśmy wyczyścić wszys
 
 
 ```sql
-CREATE TABLE #CountriesToClean (
-    Country VARCHAR(50)
-);
-
-INSERT INTO #CountriesToClean (Country)
-VALUES ('Japan'),
-       ('Germany'),
-       ('France'),
-       ('Italy'),
-       ('Australia');
-
--- wyświetlenie zawartości tabeli tymczasowej
-SELECT * FROM #CountriesToClean;
-
+CREATE TABLE #CountriesToClean (
+    Country VARCHAR(50)
+);
+INSERT INTO #CountriesToClean (Country)
+VALUES ('Japan'),
+       ('Germany'),
+       ('France'),
+       ('Italy'),
+       ('Australia');
 
+-- wyświetlenie zawartości tabeli tymczasowej
+SELECT * FROM #CountriesToClean;
 ```
 
+Bazując na tej tabeli tymczasowiej, możemy ją teraz wykorzystać do usunięcia informacji o użytkownikach z tych państw.
 
-(5 rows affected)
-
-
-
-(5 rows affected)
-
-
-
-Total execution time: 00:00:00.006
-
-
-
-
-
-<table><tr><th>Country</th></tr><tr><td>Japan</td></tr><tr><td>Germany</td></tr><tr><td>France</td></tr><tr><td>Italy</td></tr><tr><td>Australia</td></tr></table>
-
-
-
-Bazując na tej tabeli tymczasowiej, możemy ją teraz wykorzystać do usunięcia informacji o użytkownikach z tych państw.
 
 
 
 ```sql
-BEGIN TRAN
-
-CREATE TABLE #CountriesToClean (
-    Country VARCHAR(50)
-);
-
-INSERT INTO #CountriesToClean (Country)
-VALUES ('Japan'),
-       ('Germany'),
-       ('France'),
-       ('Italy'),
-       ('Australia');
-
--- wyświetlenie zawartości tabeli tymczasowej
-SELECT * FROM #CountriesToClean;
-
-
--- usunięcie informacji o wypożyczeniach
-DELETE l
-FROM Loans l
-JOIN Users u on u.UserId = l.UserId
-JOIN Addresses a on a.AddressId = u.AddressId
-WHERE a.Country IN (SELECT Country FROM #CountriesToClean)
-
--- usunięcie użytkowników
-
-DELETE u
-FROM Users u
-JOIN Addresses a on a.AddressId = u.AddressId
-WHERE a.Country IN (SELECT Country FROM #CountriesToClean)
-
--- usunięcie adresów
-
-DELETE 
-FROM Addresses 
-WHERE Country IN (SELECT Country FROM #CountriesToClean)
-
-
+BEGIN TRAN
+CREATE TABLE #CountriesToClean (
+    Country VARCHAR(50)
+);
+INSERT INTO #CountriesToClean (Country)
+VALUES ('Japan'),
+       ('Germany'),
+       ('France'),
+       ('Italy'),
+       ('Australia');
+
+-- wyświetlenie zawartości tabeli tymczasowej
+SELECT * FROM #CountriesToClean;
+
+-- usunięcie informacji o wypożyczeniach
+DELETE l
+FROM Loans l
+JOIN Users u on u.UserId = l.UserId
+JOIN Addresses a on a.AddressId = u.AddressId
+WHERE a.Country IN (SELECT Country FROM #CountriesToClean)
+
+-- usunięcie użytkowników
+DELETE u
+FROM Users u
+JOIN Addresses a on a.AddressId = u.AddressId
+WHERE a.Country IN (SELECT Country FROM #CountriesToClean)
+
+-- usunięcie adresów
+DELETE 
+FROM Addresses 
+WHERE Country IN (SELECT Country FROM #CountriesToClean)
 ROLLBACK TRAN
 ```
-
-
-(5 rows affected)
-
-
-
-(5 rows affected)
-
-
-
-(10 rows affected)
-
-
-
-(8 rows affected)
-
-
-
-(7 rows affected)
-
-
-
-Total execution time: 00:00:00.004
-
-
-
-
-
-<table><tr><th>Country</th></tr><tr><td>Japan</td></tr><tr><td>Germany</td></tr><tr><td>France</td></tr><tr><td>Italy</td></tr><tr><td>Australia</td></tr></table>
-
-
 
 W ten prosty sposób, tworząc tabele tymczasowe, możemy przechowywać wiele wartości w 'jednym miejscu', a następnie wykonywać na nich róźne operacje.

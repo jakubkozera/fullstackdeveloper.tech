@@ -1,4 +1,4 @@
-## Funkcje okna
+# Funkcje okna
 
 Funkcje okna to zaawansowane funkcje analityczne i agregacyjne, które pozwalają na wykonywanie operacji na zestawie wierszy związanych z bieżącym wierszem bez konieczności używania podzapytań lub dodatkowych tabel. Są one bardzo przydatne do obliczeń, które wymagają kontekstowego przetwarzania danych, takiego jak sumowanie w ramach określonego zakresu wierszy, obliczanie wartości średnich, czy uzyskiwanie rang.
 
@@ -160,27 +160,29 @@ Najpierw, musimy nadać rangę każdemu produktowi w ramach jego kategorii, sort
 
 
 ```sql
-SELECT Name, ListPrice, ProductCategoryID, 
-    ROW_NUMBER() OVER(PARTITION BY ProductCategoryID ORDER BY ListPrice DESC) CategoryMostExpensiveRank
-FROM [SalesLT].[Product]
-
+SELECT Name, ListPrice, ProductCategoryID, 
+    ROW_NUMBER() OVER(PARTITION BY ProductCategoryID ORDER BY ListPrice DESC) CategoryMostExpensiveRank
+FROM [SalesLT].[Product]
 ```
 
-
-Następnie, możemy wybrać produkty z najwyższą rangą w każdej kategorii.
-
+
+
+Następnie, możemy wybrać produkty z najwyższą rangą w każdej kategorii.
+
+
+
 
 
 
 ```sql
-SELECT Name, ListPrice, ProductCategoryID
-FROM (
-    SELECT Name, ListPrice, ProductCategoryID, ROW_NUMBER() OVER(PARTITION BY ProductCategoryID ORDER BY ListPrice DESC) CategoryMostExpensiveRank
-    FROM [SalesLT].[Product]
-) ranked
-WHERE CategoryMostExpensiveRank <= 3;
-
+SELECT Name, ListPrice, ProductCategoryID
+FROM (
+    SELECT Name, ListPrice, ProductCategoryID, ROW_NUMBER() OVER(PARTITION BY ProductCategoryID ORDER BY ListPrice DESC) CategoryMostExpensiveRank
+    FROM [SalesLT].[Product]
+) ranked
+WHERE CategoryMostExpensiveRank <= 3;
 ```
 
-W tym przykładzie, `PARTITION BY` dzieli produkty na grupy według `ProductCategoryID`, a `ORDER BY` sortuje produkty w każdej grupie według `ListPrice`. Następnie, `ROW_NUMBER()` nadaje rangę każdemu produktowi w ramach jego kategorii - odpowiednio oznaczając każdy wiersz z osobna. W zewnętrznym zapytaniu, wybieramy produkty z najwyższą rangą w każdej kategorii, ograniczając wyniki do `n`.
+W tym przykładzie, `PARTITION BY` dzieli produkty na grupy według `ProductCategoryID`, a `ORDER BY` sortuje produkty w każdej grupie według `ListPrice`. Następnie, `ROW_NUMBER()` nadaje rangę każdemu produktowi w ramach jego kategorii - odpowiednio oznaczając każdy wiersz z osobna. W zewnętrznym zapytaniu, wybieramy produkty z najwyższą rangą w każdej kategorii, ograniczając wyniki do `n`.
+
 
