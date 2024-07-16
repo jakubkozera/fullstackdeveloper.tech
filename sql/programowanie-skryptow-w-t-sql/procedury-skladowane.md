@@ -15,7 +15,9 @@ Główne róźnice między funkcją, a procedurą składowaną są następujące
 | Nie zezwala na użycie bloków Try...Catch do obsługi wyjątków. | Pozwala na użycie bloków Try...Catch do obsługi wyjątków. |
 | Transakcje nie są dozwolone w funkcji. | Procedura składowana może zawierać transakcje. |
 | Funkcja nie może wywołać procedury składowanej. | Procedura składowana może być wywołać funkcje, lub inne procedury. |
-| Instrukcje SELECT mogą wywoływać funkcje. | Procedury składowane nie mogą być dostępne przez wywołane przez  SELECT/WHERE lub HAVING.<br>Aby uruchomić procedurę składowaną, używamy polecenie EXECUTE (EXEC). |
+| Instrukcje SELECT mogą wywoływać funkcje. | Procedury składowane nie mogą być dostępne przez wywołane przez  SELECT/WHERE lub HAVING.
+
+Aby uruchomić procedurę składowaną, używamy polecenie EXECUTE (EXEC). |
 | W klauzulach JOIN można używać funkcji. | Klauzule JOIN nie mogą używać procedur składowanych. |
 
 Ze względu na te róźnice, procedury składowane są bardziej elastyczne niż funkcje, ale mogą być mniej wydajne. W związku z tym, zaleca się stosowanie funkcji, jeśli chcemy zwrócić pojedynczą wartość, a procedurę składowaną, jeśli chcemy zwrócić wiele wartości, albo wykonać operacje na obiektach bazy danych.

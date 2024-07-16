@@ -57,7 +57,7 @@ SELECT MIN(OrderDate) AS EarliestOrderDate
 FROM SalesLT.SalesOrderHeader;
 ```
 
-5\. <span style="color: #569cd6;font-weight: bold;"><strong>COUNT</strong></span>: Funkcja `COUNT()` zwraca liczbe wierszy zwróconych przez zapytanie. Funkcja ta przyjmuje jeden argument, który może być kolumną, wyrażeniem, literałem lub `*`.
+5. **COUNT**: Funkcja `COUNT()` zwraca liczbe wierszy zwróconych przez zapytanie. Funkcja ta przyjmuje jeden argument, który może być kolumną, wyrażeniem, literałem lub `*`.
 
 
 ```sql

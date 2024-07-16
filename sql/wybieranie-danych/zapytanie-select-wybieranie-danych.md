@@ -25,12 +25,11 @@ Główne zadania zapytania SELECT to:
 
 Zapytanie SELECT jest niezwykle elastycznym narzędziem, które umożliwia zaawansowane manipulacje danymi w bazie danych, co czyni je kluczowym elementem w pracy z bazami danych przy użyciu języka SQL.
 
-Przykładowo, aby pobrać wszystkie Nazwy (kolumna `Name`) produktów z tabeli `SalesLT.Product`, możemy wykonować następujące polecenie:</span>
+Przykładowo, aby pobrać wszystkie Nazwy (kolumna `Name`) produktów z tabeli `SalesLT.Product`, możemy wykonować następujące polecenie:
 
 
 ```sql
 SELECT Name
-
 FROM SalesLT.Product
 ```
 
@@ -39,7 +38,6 @@ W ramach jednego zapytania możemy również pobierać wiele kolumn jednocześni
 
 ```sql
 SELECT Name, ProductNumber, ListPrice
-
 FROM SalesLT.Product
 ```
 
@@ -48,7 +46,6 @@ Nazwy kolumn, możemy też definiować w ramach nawiasów kwadratowych, przykła
 
 ```sql
 SELECT [Name], ProductNumber, [ListPrice]
-
 FROM SalesLT.Product
 ```
 
@@ -57,7 +54,6 @@ Możemy również zmienić mapowanie nazwy kolumny, do innej nazwy w ramach rezu
 
 ```sql
 SELECT [Name] as [ProductName], ProductNumber [PNumber], [ListPrice]
-
 FROM SalesLT.Product
 ```
 
@@ -66,7 +62,6 @@ Poza tym, możemy również wybrać wszystkie dostępny kolumny, z konkretnej ta
 
 ```sql
 SELECT *
-
 FROM SalesLT.Product
 ```
 
@@ -75,7 +70,6 @@ Domyślnie SQL Server, zwróci wszystkie wiersze, z tabeli, jeżeli w żaden spo
 
 ```sql
 SELECT TOP 10 *
-
 FROM SalesLT.Product
 ```
 
@@ -84,7 +78,6 @@ Liczbę zwracanych wierszy klauzulą TOP, możemy też określić procentowo
 
 ```sql
 SELECT TOP 10 percent *
-
 FROM SalesLT.Product
 ```
 
@@ -93,7 +86,6 @@ Jeżeli z konkretnej kolumny, chcielibyśmy uzyskać unikalne wartości, to moż
 
 ```sql
 SELECT DISTINCT Color
-
 FROM SalesLT.Product
 ```
 
@@ -102,6 +94,5 @@ Klauzule `DISTINCT` możemy też wykorzsytać do pobrania wielu kolumn z wierszy
 
 ```sql
 SELECT DISTINCT Color, Size
-
 FROM SalesLT.Product
 ```

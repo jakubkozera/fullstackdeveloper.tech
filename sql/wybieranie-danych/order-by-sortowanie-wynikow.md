@@ -29,12 +29,8 @@ Przykładowo, aby posortować wyniki zapytania SELECT tabeli Customers według k
 
 ```sql
 SELECT *
-
 FROM SalesLT.Customer
-
 ORDER BY LastName 
-
-
 ```
 
 Jeżeli mamy potrzebę sortowania więcej niż 1 kolumny, możemy to zrobić, przykładowo, w następujący sposób:
@@ -44,12 +40,8 @@ Jeżeli mamy potrzebę sortowania więcej niż 1 kolumny, możemy to zrobić, pr
 
 ```sql
 SELECT *
-
 FROM SalesLT.Customer
-
 ORDER BY LastName ASC, FirstName DESC;
-
-
 ```
 
 W połączeniu z ograniczeniem zwracanych rezultatów przez `TOP 1` możemy zastosować zapytanie z `ORDER BY` w celu znalezienia największej wartości w kolumnie. W przypadku, gdy wartość jest unikalna, zapytanie zwróci jedną wartość. W przeciwnym przypadku zwróci jedną z wartości, które są największe.
@@ -65,9 +57,7 @@ Przykładowo, aby pobrać zamówienie z największą kwotą całkowitą, możemy
 
 ```sql
 SELECT TOP 1 *
-
 FROM [SalesLT].[SalesOrderHeader]
-
 ORDER BY SubTotal DESC;
 ```
 
@@ -100,16 +90,9 @@ Napisz zapytanie SQL, które wykonają:
 
 ```sql
 SELECT SalesOrderId, OrderQty, UnitPrice
-
 FROM SalesLT.SalesOrderDetail
-
 WHERE OrderQty > 5
-
 ORDER BY OrderQty DESC
-
-
-
-
 ```
 
 2. Sortowanie zamówień (tabela: `SalesLT.SalesOrderHeader`) według daty zamówienia `OrderDate` w kolejności rosnącej, dodatkowo jeśli zamówienia mają tą samą datę to posortujemy je według ceny całkowitej `SubTotal` w kolejności malejącej.
@@ -119,20 +102,16 @@ ORDER BY OrderQty DESC
 
 ```sql
 SELECT *
-
 FROM SalesLT.SalesOrderHeader
-
 ORDER BY OrderDate ASC, SubTotal DESC
 ```
 
-3\. Sortowanie produktów (tabela `[SalesLT].[Product]`) po cenie `ListPrice`, w celu znalezienia i zwrócenia tylko najtańszego</span>
+3. Sortowanie produktów (tabela `[SalesLT].[Product]`) po cenie `ListPrice`, w celu znalezienia i zwrócenia tylko najtańszego
 
 
 ```sql
 SELECT TOP 1 *
-
 FROM SalesLT.Product
-
 ORDER BY ListPrice ASC
 ```
 

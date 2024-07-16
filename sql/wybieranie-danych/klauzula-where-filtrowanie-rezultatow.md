@@ -15,13 +15,9 @@ Przykładowe użycie klauzuli WHERE w zapytaniu SELECT może wyglądać tak:
 
 
 ```sql
-
 SELECT column1, column2
-
 FROM table_name
-
 WHERE condition;
-
 ```
 
 
@@ -49,12 +45,8 @@ Z pojedynczym filtrem wykorzystując operator '=':
 
 ```sql
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE LastName = 'Smith';
-
-
 ```
 
 Z pojedynczym filtrem wykorzystując operator `<>`/ `!=`
@@ -62,12 +54,8 @@ Z pojedynczym filtrem wykorzystując operator `<>`/ `!=`
 
 ```sql
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE LastName <> 'Smith';
-
-
 ```
 
 Z pojedynczym filtrem wykorzystując operator `>`:
@@ -77,12 +65,8 @@ Z pojedynczym filtrem wykorzystując operator `>`:
 
 ```sql
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE CustomerID > 100;
-
-
 ```
 
 
@@ -94,12 +78,8 @@ Z dwoma filtrami łącząc je operatorem `AND`:
 
 ```sql
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE FirstName = 'John' AND LastName <> 'Doe';
-
-
 ```
 
 
@@ -111,11 +91,8 @@ Z dwoma filtrami łącząc je operatorem `OR`:
 
 ```sql
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE FirstName = 'John' OR LastName = 'Smith';
-
 
 ```
 
@@ -126,11 +103,8 @@ WHERE FirstName = 'John' OR LastName = 'Smith';
 
 ```sql
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE FirstName = 'John' AND (LastName = 'Berger' OR FirstName = 'Margaret') AND LastName <> 'Smith';
-
 
 ```
 
@@ -145,9 +119,7 @@ Znajdź klientów, których pole MiddleName jest puste (NULL):
 
 ```sql
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE MiddleName IS NULL
 
 
@@ -158,11 +130,8 @@ Znajdź klientów, którzy mają wprowadzony adres email (niepuste pole MiddleNa
 
 ```sql
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE MiddleName IS NOT NULL
-
 
 ```
 
@@ -173,9 +142,7 @@ Jeżeli w konkretnym zapytaniu chcielibyśmy sprawdzić zakres/przedział warto�
 
 
 ```sql
-
 SELECT * FROM table_name WHERE column_name >= value1 AND column_name <= value2;
-
 ```
 
 
@@ -185,9 +152,7 @@ Jednakże, w przypadku gdy chcemy sprawdzić zakres wartości z kilku kolumn, to
 
 
 ```sql  
-
 SELECT * FROM table_name WHERE column_name BETWEEN value1 AND value2;
-
 ```
 
 
@@ -205,24 +170,14 @@ W poniższym przykładzie, zwrócimy wszystkie rekordy z tabeli `Customers`, gdz
 
 ```sql
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE CustomerID BETWEEN 10 AND 25;
-
-
-
-
-
-
 ```
 
 Operator `BETWEEN` możemy też wykorzystać do sprawdzania dat. Wtedy zamiast `AND` używamy `BETWEEN` i podajemy dwie daty.
 
 ```sql
-
 SELECT * FROM table_name WHERE date_column BETWEEN '2019-01-01' AND '2019-12-31';
-
 ```
 
 
@@ -230,30 +185,18 @@ SELECT * FROM table_name WHERE date_column BETWEEN '2019-01-01' AND '2019-12-31'
 Poza `BETWEEN`, w ramach klauzuli `WHERE`, możemy też wykorzystać operator `IN`, który pozwala na sprawdzenie, czy wartość z danej kolumny znajduje się w podanej liście.
 
 ```sql
-
 SELECT * FROM table_name WHERE column_name IN ('value1', 'value2', 'value3');
-
 ```
 
 
 
 Przykładowo, żeby sprawdzić czy nazwisko klienta znajduje się w liście 'Smith', 'Johnson', 'Williams', możemy użyć zapytania:
 
-```sql
-
 
 ```sql
 SELECT * 
-
 FROM SalesLT.Customer 
-
 WHERE LastName IN ('Smith', 'Johnson', 'Williams');
-
-
-
-
-
-
 ```
 
 ### `LIKE`
@@ -279,21 +222,17 @@ Przykłady zastosowania operatora `LIKE`:
 1. **Wyszukiwanie wartości zaczynających się na określony ciąg znaków:**
 
    ```sql
-
    SELECT * FROM tabela WHERE kolumna LIKE 'abc%';
-
    ```
 
-   Ten zapytanie zwróci wszystkie wiersze, gdzie kolumna zaczyna się od "abc".
+   To zapytanie zwróci wszystkie wiersze, gdzie kolumna zaczyna się od "abc".
 
 
 
 2. **Wyszukiwanie wartości kończących się na określony ciąg znaków:**
 
    ```sql
-
    SELECT * FROM tabela WHERE kolumna LIKE '%xyz';
-
    ```
 
    To zapytanie zwróci wszystkie wiersze, gdzie kolumna kończy się na "xyz".
@@ -303,9 +242,7 @@ Przykłady zastosowania operatora `LIKE`:
 3. **Wyszukiwanie wartości zawierających określony ciąg znaków:**
 
    ```sql
-
    SELECT * FROM tabela WHERE kolumna LIKE '%def%';
-
    ```
 
    To zapytanie zwróci wszystkie wiersze, gdzie kolumna zawiera "def" w dowolnym miejscu.
@@ -315,9 +252,7 @@ Przykłady zastosowania operatora `LIKE`:
 4. **Wyszukiwanie wartości z określonymi znakami na konkretnych pozycjach:**
 
    ```sql
-
    SELECT * FROM tabela WHERE kolumna LIKE 'a_c';
-
    ```
 
    To zapytanie zwróci wszystkie wiersze, gdzie kolumna zaczyna się na "a", ma dowolny jeden znak w środku, a następnie "c" (np. "abc", "a3c", ale nie "ac").
@@ -327,9 +262,7 @@ Przykłady zastosowania operatora `LIKE`:
 5. **Łączenie różnych wzorców:**
 
    ```sql
-
    SELECT * FROM tabela WHERE kolumna LIKE 'a%c%';
-
    ```
 
    To zapytanie zwróci wszystkie wiersze, gdzie kolumna zaczyna się na "a" i zawiera "c" w dowolnym miejscu po "a" (np. "abc", "a123c").
@@ -346,12 +279,8 @@ Przykładowo, aby pobrać informacje klientów, których nazwiska kończą się 
 
 
 ```sql
-
-
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE LastName LIKE '%sen';
 ```
 
@@ -364,9 +293,7 @@ Albo, aby pobrać klientów, których imię zaczyna się na "A" i kończy na "a"
 
 ```sql
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE FirstName LIKE 'A%a';
 ```
 
@@ -379,9 +306,7 @@ Co ciekawe, w zależności od ustawień konkretnej bazy, operator `LIKE`, może 
 
 ```sql
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE FirstName LIKE 'a%a';
 ```
 
@@ -394,9 +319,7 @@ Przykładowo, 3 literowe imie, kończące się na 'e'
 
 ```sql
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE FirstName LIKE '__e';
 ```
 
@@ -413,12 +336,8 @@ Choć `LIKE` nie jest tak potężny jak regex, można go czasem użyć do bardzi
 -- pobranie użytkowników z imieniem zaczynającym się od a, k, lub l
 
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE FirstName LIKE '[akl]%'; 
-
-
 ```
 
 
@@ -426,9 +345,7 @@ WHERE FirstName LIKE '[akl]%';
 -- pobranie użytkowników z imieniem niezaczynającym się od a, k, lub l
 
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE FirstName LIKE '[^akl]%'; 
 ```
 
@@ -437,8 +354,6 @@ WHERE FirstName LIKE '[^akl]%';
 -- pobranie użytkowników z imieniem kończącym się na literę w zakresie od a do e
 
 SELECT *
-
 FROM SalesLT.Customer
-
 WHERE FirstName LIKE '%[a-e]';
 ```

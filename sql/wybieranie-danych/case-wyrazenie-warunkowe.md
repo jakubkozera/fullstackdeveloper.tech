@@ -14,7 +14,7 @@ Istnieją dwa główne rodzaje wyrażenia `CASE`:
 
 1. **Proste wyrażenie CASE:** Sprawdza wyrażenie i zwraca wartość na podstawie pierwszego spełnionego warunku.
     
-    ```
+    ```sql
     CASE expression
         WHEN value1 THEN result1
         WHEN value2 THEN result2
@@ -26,15 +26,15 @@ Istnieją dwa główne rodzaje wyrażenia `CASE`:
     
 2. **Skrócone wyrażenie CASE:** Wykonuje porównanie między wyrażeniem a serią warunków. Jeśli warunek jest spełniony, zwraca określoną wartość.
     
-    ```
+    ```sql
     CASE
         WHEN condition1 THEN result1
         WHEN condition2 THEN result2
         ...
         ELSE elseResult
     END
-    
-    ```
+
+```
     
 
 **Przykład użycia:**
@@ -44,19 +44,12 @@ Proste wyrażenie CASE:
 
 ```sql
 SELECT 
-
     Name,
-
     CASE Color
-
         WHEN 'Black' THEN 'Czarny'
-
         WHEN 'Red' THEN 'Czerwony'
-
         ELSE Color 
-
     END AS TranslatedColor
-
 FROM SalesLT.Product;
 
 
@@ -71,17 +64,11 @@ Sprawdźmy jak zachowa się to samo zapytanie bez: `ELSE Color`:
 
 ```sql
 SELECT 
-
     Name,
-
     CASE Color
-
         WHEN 'Black' THEN 'Czarny'
-
         WHEN 'Red' THEN 'Czerwony'
-
     END AS TranslatedColor
-
 FROM SalesLT.Product;
 ```
 
@@ -90,20 +77,12 @@ Drugą wersję `CASE` będziemy musieli używać w przypadku sprawdzenia wartoś
 
 ```sql
 SELECT 
-
     SalesOrderID,
-
     TotalDue,
-
     CASE 
-
         WHEN TotalDue > 10000 THEN 'Big order'
-
         WHEN TotalDue > 5000 AND Comment != 'TEST' THEN 'Medium order'
-
         ELSE 'Small order'
-
     END AS OrderSize
-
 FROM SalesLT.SalesOrderHeader
 ```

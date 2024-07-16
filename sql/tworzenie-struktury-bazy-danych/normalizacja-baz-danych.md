@@ -57,7 +57,7 @@ Eliminujemy nadmiarowe dane poprzez podział tabeli: **Studenci:**
 | 4123 | Borkowski | 216 |
 | **Rejestracja:** |  |  |
 | Nr studenta | Nr zajęć |  |
-| \--- | \--- |  |
+| --- | --- |  |
 | 1022 | 101-07 |  |
 | 1022 | 143-01 |  |
 | 1022 | 159-02 |  |
@@ -75,6 +75,5 @@ Eliminujemy dane zależne od klucza. Przenosimy atrybut **Pokój opiekuna** do o
 | 4123 | Borkowski |
 | **Wykładowcy:** |  |
 | Nazwa | Pokój |
-| \--- | \--- |
 | Czarnecki | 412 |
 | Borkowski | 216 |

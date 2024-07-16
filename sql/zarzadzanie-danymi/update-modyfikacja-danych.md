@@ -45,7 +45,7 @@ WHERE UserId = 2;
 
 #### 3\. Modyfikacja Stanu Egzemplarza Książki
 
-Jeśli stan egzemplarza książki się zmienia (na przykład w wyniku naprawy lub zniszczenia), możemy zaktualizować tę informację w tabeli `Copies`. Załóżmy, że zmieniamy stan egzemplarza o identyfikatorze <span style="font-size: 12px;">1&nbsp;</span> na "<span style="color: rgb(206, 145, 120); font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; white-space: pre;">Not good</span><span style="color: var(--vscode-foreground);">".</span>
+Jeśli stan egzemplarza książki się zmienia (na przykład w wyniku naprawy lub zniszczenia), możemy zaktualizować tę informację w tabeli `Copies`. Załóżmy, że zmieniamy stan egzemplarza o identyfikatorze *1* na "Not good"
 
 
 ```sql

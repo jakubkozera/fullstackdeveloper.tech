@@ -29,11 +29,8 @@ Przykładowe zapytanie może wyglądać tak:
 
 ```sql
 SELECT CustomerID, SUM(SubTotal) AS TotalOrderValue
-
 FROM SalesLT.SalesOrderHeader
-
 GROUP BY CustomerID;
-
 
 ```
 
@@ -60,11 +57,8 @@ Przykładowo, jeżeli chciałbym dostać informacje o statusie zamówienia, to n
 
 ```sql
 SELECT CustomerID, [Status], SUM(SubTotal) AS TotalOrderValue
-
 FROM SalesLT.SalesOrderHeader
-
 GROUP BY CustomerID;
-
 
 ```
 
@@ -75,12 +69,8 @@ GROUP BY CustomerID;
 
 ```sql
 SELECT CustomerID, [Status], SUM(SubTotal) AS TotalOrderValue
-
 FROM SalesLT.SalesOrderHeader
-
 GROUP BY CustomerID, [Status];
-
-
 ```
 
 Rezultaty zwracane przez `GROUP BY` możemy też sortować, z tym, że klauzula `ORDER BY` musi znajdować się po `GROUP BY`.
@@ -96,11 +86,8 @@ Przykładowo, aby posortować wyniki grupowania po liczbie wariantów danego mod
 
 ```sql
 SELECT ProductModelID, COUNT(*) as [ModelCount]
-
 FROM [SalesLT].[Product]
-
 GROUP BY ProductModelID 
-
 ORDER BY ProductModelID DESC
 ```
 
@@ -109,14 +96,9 @@ Możemy też posortować po rezultatach funkcji agregującej, odpowiednio dla te
 
 ```sql
 SELECT ProductModelID, COUNT(*) as [ModelCount]
-
 FROM [SalesLT].[Product]
-
 GROUP BY ProductModelID 
-
 ORDER BY ModelCount DESC
-
-
 ```
 
 ---
@@ -140,11 +122,8 @@ ORDER BY ModelCount DESC
 -- ROWZWIĄZANIE
 
 
-
 SELECT StateProvince, COUNT(DISTINCT City) [NumberOfCities]
-
 FROM SalesLT.Address
-
 GROUP BY StateProvince
 ```
 
@@ -159,14 +138,9 @@ GROUP BY StateProvince
 -- ROWZWIĄZANIE
 
 
-
 SELECT SalesPerson, COUNT(CustomerID) [CustomerCount]
-
 FROM SalesLT.Customer
-
 GROUP BY SalesPerson
-
-
 ```
 
 
@@ -180,13 +154,9 @@ GROUP BY SalesPerson
 -- ROWZWIĄZANIE
 
 
-
 SELECT TOP 1 SalesPerson, COUNT(CustomerID) [CustomerCount]
-
 FROM SalesLT.Customer
-
 GROUP BY SalesPerson
-
 ORDER BY CustomerCount DESC
 ```
 
@@ -205,29 +175,10 @@ ORDER BY CustomerCount DESC
 
 
 SELECT Color, AVG(ListPrice) AveragePrice
-
 FROM SalesLT.Product
-
 WHERE ListPrice > 100
-
 GROUP BY Color
 ```
-
-
-(7 rows affected)
-
-
-
-Total execution time: 00:00:00.010
-
-
-
-
-
-<table><tr><th>Color</th><th>AveragePrice</th></tr><tr><td>NULL</td><td>138,4081</td></tr><tr><td>Black</td><td>960,9402</td></tr><tr><td>Blue</td><td>1081,3713</td></tr><tr><td>Grey</td><td>125,00</td></tr><tr><td>Red</td><td>1438,8948</td></tr><tr><td>Silver</td><td>1102,9215</td></tr><tr><td>Yellow</td><td>1072,229</td></tr></table>
-
-
-
 
 
 **5. Znajdź cene najtańszego produktu w danym rozmiarze** `Size`:
@@ -238,11 +189,7 @@ Total execution time: 00:00:00.010
 ```sql
 -- ROWZWIĄZANIE
 
-
-
 SELECT Size, MIN(ListPrice) CheapestPrice
-
 FROM SalesLT.Product
-
 GROUP BY Size
 ```

@@ -112,11 +112,12 @@ Aby dodać opcję kaskadowego usuwania (lub inną) do istniejącej tabeli, może
 ```
 ALTER TABLE OrderDetails ADD FOREIGN KEY (OrderID) REFERENCES Orders(OrderID) ON DELETE CASCADE;
 ```
-**Zalety kaskadowego usuwania:**
+### **Zalety kaskadowego usuwania:**
 - **Utrzymanie integralności danych:** Zapewnia, że ​​baza danych nie zawiera niepotrzebnych lub niespójnych danych.
 - **Ułatwia usuwanie danych:** Pozwala na usunięcie wszystkich powiązanych danych za pomocą jednego polecenia DELETE.
 - **Zmniejsza ilość kodu:** Eliminuje potrzebę pisania osobnych instrukcji DELETE dla każdej tabeli.
-**Wady kaskadowego usuwania:**
+
+### **Wady kaskadowego usuwania:**
 - **Może prowadzić do utraty danych:** Należy zachować ostrożność podczas korzystania z kaskadowego usuwania, ponieważ może ono spowodować usunięcie danych, których nie chcieliśmy usunąć.
 - **Może powodować problemy z wydajnością:** Usuwanie dużej ilości danych z wielu tabel może być czasochłonne.
 - **Utrudnia odzyskiwanie danych:** Usunięte dane są trwale usuwane i nie można ich łatwo odzyskać.

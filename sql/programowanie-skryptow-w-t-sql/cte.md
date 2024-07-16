@@ -1,6 +1,6 @@
 # CTE
 
-CTE (Common Table Expressions) w MS SQL to tymczasowe zestawy wyników zdefiniowane w ramach zapytania, które mogą być używane przez inne lub to <span style="color: var(--vscode-foreground);">samo</span> <span style="color: var(--vscode-foreground);">zapytanie. CTE są przydatne do podziału skomplikowanych zapytań na bardziej zrozumiałe i łatwiejsze do zarządzania fragmenty. Pozwalają one również na odwoływanie się do siebie nawzajem, co umożliwia tworzenie rekurencyjnych zapytań.</span>
+CTE (Common Table Expressions) w MS SQL to tymczasowe zestawy wyników zdefiniowane w ramach zapytania, które mogą być używane przez inne lub to samo zapytanie. CTE są przydatne do podziału skomplikowanych zapytań na bardziej zrozumiałe i łatwiejsze do zarządzania fragmenty. Pozwalają one również na odwoływanie się do siebie nawzajem, co umożliwia tworzenie rekurencyjnych zapytań. 
 
 CTE są definiowane za pomocą klauzuli `WITH` i mogą być używane w zapytaniach `SELECT`, `INSERT`, `UPDATE` i `DELETE`. Przykładowa składnia CTE wygląda następująco:
 
