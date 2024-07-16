@@ -1,4 +1,4 @@
-## `CASE` - wyrażenie warunkowe
+# `CASE` - wyrażenie warunkowe
 
 Czasem pisząc zapytania SQL, będziemy mieli potrzebę zmienienia wartości zwracanej z danej kolumny na inną postać, przykładowo, status zamówienia, który może być w bazie zapisywanany jako wartość numeryczna: 1,2,3 ... może być reprezentowany jako wartość teskstowa: "Złożono zamówienie", "Opłacono", "Wysłano"..  
 
@@ -43,29 +43,45 @@ Proste wyrażenie CASE:
 
 
 ```sql
-SELECT 
-    Name,
-    CASE Color
-        WHEN 'Black' THEN 'Czarny'
-        WHEN 'Red' THEN 'Czerwony'
-        ELSE Color 
-    END AS TranslatedColor
-FROM SalesLT.Product;
+SELECT 
+
+    Name,
+
+    CASE Color
+
+        WHEN 'Black' THEN 'Czarny'
+
+        WHEN 'Red' THEN 'Czerwony'
+
+        ELSE Color 
+
+    END AS TranslatedColor
+
+FROM SalesLT.Product;
+
 
 ```
 
-Jeśli nie podamy bloku ELSE, a wartość nie będzie dopasowana, to domyślnie w daną kolumnę zostanie wprowadzona wartość `NULL`.
-Sprawdźmy jak zachowa się to samo zapytanie bez: `ELSE Color`:
+Jeśli nie podamy bloku ELSE, a wartość nie będzie dopasowana, to domyślnie w daną kolumnę zostanie wprowadzona wartość `NULL`.
+
+Sprawdźmy jak zachowa się to samo zapytanie bez: `ELSE Color`:
+
 
 
 
 ```sql
-SELECT 
-    Name,
-    CASE Color
-        WHEN 'Black' THEN 'Czarny'
-        WHEN 'Red' THEN 'Czerwony'
-    END AS TranslatedColor
+SELECT 
+
+    Name,
+
+    CASE Color
+
+        WHEN 'Black' THEN 'Czarny'
+
+        WHEN 'Red' THEN 'Czerwony'
+
+    END AS TranslatedColor
+
 FROM SalesLT.Product;
 ```
 
@@ -73,14 +89,22 @@ Drugą wersję `CASE` będziemy musieli używać w przypadku sprawdzenia wartoś
 
 
 ```sql
-SELECT 
-    SalesOrderID,
-    TotalDue,
-    CASE 
-        WHEN TotalDue > 10000 THEN 'Big order'
-        WHEN TotalDue > 5000 AND Comment != 'TEST' THEN 'Medium order'
-        ELSE 'Small order'
-    END AS OrderSize
+SELECT 
+
+    SalesOrderID,
+
+    TotalDue,
+
+    CASE 
+
+        WHEN TotalDue > 10000 THEN 'Big order'
+
+        WHEN TotalDue > 5000 AND Comment != 'TEST' THEN 'Medium order'
+
+        ELSE 'Small order'
+
+    END AS OrderSize
+
 FROM SalesLT.SalesOrderHeader
 ```
 

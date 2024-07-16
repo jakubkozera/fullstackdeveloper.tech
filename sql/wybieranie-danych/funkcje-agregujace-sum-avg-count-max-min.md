@@ -1,3 +1,5 @@
+# Funkcje agregujące 
+
 Poza podstawowymi klauzulami, które poznaliśmy do tej pory, SQL oferuje również funkcje agregujące, które pozwalają na przetwarzanie zestawów danych i zwracanie jednej wartości wynikowej. Jest to przydatna funkcja w analizie danych, pozwalająca na obliczanie sum, średnich wartości, liczby wierszy, maksimum, minimum itp. w kolumnach tabeli. 
 
 **Wstęp do funkcji agregujących w SQL:**

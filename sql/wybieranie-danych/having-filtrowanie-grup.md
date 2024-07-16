@@ -1,4 +1,4 @@
-## HAVING - Filtrowanie grup
+# HAVING - Filtrowanie grup
 
 Podobnie jak wiersze w tabeli, możemy również filtrować kolumny w wynikach 'zapytania z grupowaniem'. W tym celu używamy klauzuli `HAVING`. Klauzula `HAVING` działa podobnie jak klauzula `WHERE`, ale jest używana do filtrowania wyników grupowanych. Przykładowa składnia klauzuli `HAVING` wygląda następująco:
 
@@ -17,24 +17,35 @@ Przykładowo, chcąc uzyskać informację o tym, które kategorie produktów, ma
 
 
 ```sql
-SELECT ProductCategoryID, COUNT(*) AS NumberOfProducts
-FROM SalesLT.Product
-GROUP BY ProductCategoryID
-HAVING COUNT(*) > 10;
+SELECT ProductCategoryID, COUNT(*) AS NumberOfProducts
+
+FROM SalesLT.Product
+
+GROUP BY ProductCategoryID
+
+HAVING COUNT(*) > 10;
+
 
 ```
 
-Istotne jest aby w klauzuli `HAVING` umieszczać funkcje agregujące, a nie aliasy kolumn.
-Użycie aliasu, w klauzuli `HAVING` spowoduje błąd.
-
+Istotne jest aby w klauzuli `HAVING` umieszczać funkcje agregujące, a nie aliasy kolumn.
+
+Użycie aliasu, w klauzuli `HAVING` spowoduje błąd.
+
+
+
 
 
 
 ```sql
-SELECT ProductCategoryID, COUNT(*) AS NumberOfProducts
-FROM SalesLT.Product
-GROUP BY ProductCategoryID
-HAVING NumberOfProducts > 10;
+SELECT ProductCategoryID, COUNT(*) AS NumberOfProducts
+
+FROM SalesLT.Product
+
+GROUP BY ProductCategoryID
+
+HAVING NumberOfProducts > 10;
+
 
 ```
 
@@ -48,9 +59,12 @@ HAVING NumberOfProducts > 10;
 
 
 ```sql
-SELECT SalesPerson, COUNT(*) CustomerCount
-FROM SalesLT.Customer
-GROUP BY SalesPerson
+SELECT SalesPerson, COUNT(*) CustomerCount
+
+FROM SalesLT.Customer
+
+GROUP BY SalesPerson
+
 HAVING COUNT(*) > 100
 ```
 
@@ -69,15 +83,20 @@ Total execution time: 00:00:00.009
 
 
 
-2\. Znajdź które modele (produktu `ProductModelID`), mają średnią cene produktu `ListPrice` większą niż 300
-
+2\. Znajdź które modele (produktu `ProductModelID`), mają średnią cene produktu `ListPrice` większą niż 300
+
+
+
 > 29 wyników
 
 
 ```sql
-SELECT ProductModelID, AVG(ListPrice) AveragePrice
-FROM SalesLT.Product
-GROUP BY ProductModelID
+SELECT ProductModelID, AVG(ListPrice) AveragePrice
+
+FROM SalesLT.Product
+
+GROUP BY ProductModelID
+
 HAVING AVG(ListPrice) > 300
 ```
 
@@ -102,9 +121,12 @@ Total execution time: 00:00:00.010
 
 
 ```sql
-SELECT Color, MIN(ListPrice) as MinPrice
-FROM SalesLT.Product
-GROUP BY Color
+SELECT Color, MIN(ListPrice) as MinPrice
+
+FROM SalesLT.Product
+
+GROUP BY Color
+
 HAVING MIN(ListPrice) > 30
 ```
 
