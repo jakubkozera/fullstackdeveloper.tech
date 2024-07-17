@@ -61,8 +61,7 @@ HAVING COUNT(*) > 100
 
 
 
-> 29 wyników
-
+<details><summary>Rozwiązanie</summary>
 
 ```sql
 SELECT ProductModelID, AVG(ListPrice) AveragePrice
@@ -70,12 +69,12 @@ FROM SalesLT.Product
 GROUP BY ProductModelID
 HAVING AVG(ListPrice) > 300
 ```
+</details>
 
 
 3\. Znajdź kolory `Color` produktów, które mają miminalną cenę `ListPrice` 30
 
-> 5 rezultatów
-
+<details><summary>Rozwiązanie</summary>
 
 ```sql
 SELECT Color, MIN(ListPrice) as MinPrice
@@ -83,4 +82,6 @@ FROM SalesLT.Product
 
 HAVING MIN(ListPrice) > 30
 ```
+
+</details>
 
