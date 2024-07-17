@@ -55,15 +55,17 @@ Eliminujemy nadmiarowe dane poprzez podział tabeli: **Studenci:**
 | --- | --- | --- |
 | 1022 | Czarnecki | 412 |
 | 4123 | Borkowski | 216 |
-| **Rejestracja:** |  |  |
-| Nr studenta | Nr zajęć |  |
-| --- | --- |  |
-| 1022 | 101-07 |  |
-| 1022 | 143-01 |  |
-| 1022 | 159-02 |  |
-| 4123 | 101-07 |  |
-| 4123 | 143-01 |  |
-| 4123 | 179-04 |  |
+
+ **Rejestracja:** 
+
+| Nr studenta | Nr zajęć |
+| --- | --- |
+| 1022 | 101-07 |
+| 1022 | 143-01 |
+| 1022 | 159-02 | 
+| 4123 | 101-07 |
+| 4123 | 143-01 |
+| 4123 | 179-04 |
 
 #### Trzecia normalna forma (3NF)
 
