@@ -55,13 +55,7 @@ BEGIN
     RETURN @FullName;
 END;
 ```
-
-
-Commands completed successfully.
-
-
-
-Total execution time: 00:00:00.001
+ 
 
 
 Po utworzeniu takiej funkcji, możemy ją wykorzystać, odpowiednio przekazując jej parametr.
@@ -81,11 +75,7 @@ FROM Authors
 -- FROM Authors
 ```
 
-
-
-
-Total execution time: 00:00:00
-
+ 
 
 ## Modyfikacja instniejących funkcji
 
@@ -306,6 +296,7 @@ Następnie przetestuj działanie funkcji dla kilku przykładowych tytułów, odp
 
 
 
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROZWIĄZANIE
@@ -334,6 +325,12 @@ BEGIN
 END;
 ```
 
+</details>
+
+
+
+
+
 2. Stwórz funkcję tablicową, która zwróci następujące informację o nie zwróconych książkach użytkownika, na podstawie jego imienia i nazwiska:
 
 
@@ -348,6 +345,8 @@ END;
 
 Następnie przetestuj działanie funkcji na przykładowych danych.
 
+
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROZWIĄZANIE
@@ -365,3 +364,4 @@ RETURN
     WHERE u.Name = @FirstName AND Surname = @LastName AND l.ReturnDate IS NULL
 )
 ```
+</details>
