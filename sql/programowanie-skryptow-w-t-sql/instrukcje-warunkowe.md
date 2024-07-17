@@ -189,6 +189,8 @@ Przykładowo, jeżeli w bazie było 5 wypożyczonych książek, z czego 3 zosta�
 Aby poprawnie wyświetlić komunikat, to do konwersji zmiennej liczbowej na typ tekstowy użyj funkcji `CONVERT(NVARCHAR, @zmiennaTypuInt)`.
 
 
+<details><summary>Rozwiązanie</summary>
+
 ```sql
 DECLARE @returnedCopiesCount INT, @notReturnedCopiesCount INT;
 SET @returnedCopiesCount = (SELECT COUNT(*) FROM Loans WHERE ReturnDate IS NOT NULL)
@@ -221,4 +223,6 @@ END
 
 
 Nie zwrócono o6 wiecej niz do tej pory zwrócono
+
+</details>
 

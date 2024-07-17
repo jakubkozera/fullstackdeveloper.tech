@@ -205,6 +205,7 @@ Następnie utworz poniższe relacje:
     - `LoanDate` - data wypożyczenia
     - `ReturnDate` - data zwrotu (opcjonalnie)
 
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROZWIĄZANIE
@@ -254,3 +255,5 @@ CREATE TABLE Loans (
     CONSTRAINT FK_Loans_Copies FOREIGN KEY (CopyId) REFERENCES Copies(CopyId),
 )
 ```
+
+</details>

@@ -79,12 +79,12 @@ Klauzula ORDER BY może być również stosowana do sortowania wyników w oparci
 
 Napisz zapytanie SQL, które wykonają:
 
-1. Sortowanie szczegółów zamówienia (tabela `SalesLT.SalesOrderDetail`) według ilości zamówionej (`OrderQty`) w kolejności malejącej, zwracając informacje z kolumn `SalesOrderID`, `OrderQty` oraz `UnitPrice`, tylko dla zamówień, które mają ilość zamówionych produktów większą niż 5.:
+1. Sortowanie szczegółów zamówienia (tabela `SalesLT.SalesOrderDetail`) według ilości zamówionej (`OrderQty`) w kolejności malejącej, zwracając informacje z kolumn `SalesOrderID`, `OrderQty` oraz `UnitPrice`, tylko dla zamówień, które mają ilość zamówionych produktów większą niż 5:
 
 
 
 
-
+<details><summary><b>Rozwiązanie</b></summary>
 
 
 
@@ -95,10 +95,13 @@ WHERE OrderQty > 5
 ORDER BY OrderQty DESC
 ```
 
+</details>
+
+
 2. Sortowanie zamówień (tabela: `SalesLT.SalesOrderHeader`) według daty zamówienia `OrderDate` w kolejności rosnącej, dodatkowo jeśli zamówienia mają tą samą datę to posortujemy je według ceny całkowitej `SubTotal` w kolejności malejącej.
 
 
-
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 SELECT *
@@ -106,8 +109,12 @@ FROM SalesLT.SalesOrderHeader
 ORDER BY OrderDate ASC, SubTotal DESC
 ```
 
+</details>
+
+
 3. Sortowanie produktów (tabela `[SalesLT].[Product]`) po cenie `ListPrice`, w celu znalezienia i zwrócenia tylko najtańszego
 
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 SELECT TOP 1 *
@@ -116,4 +123,5 @@ ORDER BY ListPrice ASC
 ```
 
 
+</details>
 

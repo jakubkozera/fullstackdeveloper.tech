@@ -116,7 +116,7 @@ ORDER BY ModelCount DESC
 1. **Znajdź liczbę miast dla każdego stanu `StateProvince` z osobna:**
 
 
-
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROWZWIĄZANIE
@@ -127,12 +127,13 @@ FROM SalesLT.Address
 GROUP BY StateProvince
 ```
 
+</details>
 
 
 2. **Znajdź liczbę klientów obługiwanych przez danego sprzedawcę (tabela `Customer`, kolumna `SalesPerson)`**
 
 
-
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROWZWIĄZANIE
@@ -143,12 +144,13 @@ FROM SalesLT.Customer
 GROUP BY SalesPerson
 ```
 
+</details>
 
 
 3. **Znajdź sprzedawce z największą liczbą przypisanych klientów**
 
 
-
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROWZWIĄZANIE
@@ -160,19 +162,18 @@ GROUP BY SalesPerson
 ORDER BY CustomerCount DESC
 ```
 
+</details>
 
 
 4. **Oblicz średnią wartość `ListPrice` produktów w danych kolorze, których cena `ListPrice` jest większa niż 100:**
 
 
 
-
+<details><summary><b>Rozwiązanie</b></summary>
 
 
 ```sql
 -- ROWZWIĄZANIE
-
-
 
 SELECT Color, AVG(ListPrice) AveragePrice
 FROM SalesLT.Product
@@ -180,11 +181,13 @@ WHERE ListPrice > 100
 GROUP BY Color
 ```
 
+</details>
+
 
 **5. Znajdź cene najtańszego produktu w danym rozmiarze** `Size`:
 
 
-
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROWZWIĄZANIE
@@ -193,3 +196,5 @@ SELECT Size, MIN(ListPrice) CheapestPrice
 FROM SalesLT.Product
 GROUP BY Size
 ```
+
+</details>

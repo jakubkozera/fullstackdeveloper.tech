@@ -113,6 +113,8 @@ VALUES ('Stephen', 'King'),
 Dodaj wiersze do tabeli z użytkownikami `Users`, oraz kopiami książek `Copies`, a następnie połącz je relacją wiele do wielu - tak, aby jedna książka, mogła być wypożyczana przez wielu użytkowników, a jeden użytkownik mógł wypożyczać wiele książek.
 
 
+<details><summary><b>Rozwiązanie</b></summary>
+
 ```sql
 -- ROZWIĄZANIE
 INSERT INTO Addresses (City, Street, HouseNumber, Country)
@@ -136,3 +138,5 @@ VALUES (1, 1, '2020-01-01'),
        (1, 3, '2021-01-01'),
        (2, 1, '2021-01-01')
 ```
+
+</details>

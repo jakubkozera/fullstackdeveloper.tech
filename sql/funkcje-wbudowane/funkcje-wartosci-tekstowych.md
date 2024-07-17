@@ -210,6 +210,7 @@ W tym przykładzie:
 
 1. Zwróć informacje: Imie, Nazwisko oraz inicjały osób z tabeli `SalesLT.Customer`
 
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROZWIĄZANIE
@@ -217,6 +218,9 @@ W tym przykładzie:
 SELECT FirstName, LastName, LEFT(FirstName, 1) + LEFT(LastName, 1) as Initials
 FROM SalesLT.Customer
 ```
+</details>
+
+
 
 2. Stwórz zapytanie SQL, które wykorzystując kolumnę EmailAddress z tabeli `SalesLT.Customer`, zwróci jedynie część adresu e-mail, która znajduje się przed znakiem '@'. Na przykład, dla adresu e-mail 'robert4@adventure-works.com', zapytanie powinno zwrócić wartość 'robert4'."
 
@@ -224,6 +228,8 @@ FROM SalesLT.Customer
 
 Rozwiązanie tego zadania można osiągnąć poprzez zastosowanie funkcji tekstowych, takich jak `LEFT()` i `CHARINDEX()`, aby wyodrębnić część adresu e-mail przed znakiem "@".
 
+
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROZWIĄZANIE
@@ -233,8 +239,13 @@ SELECT EmailAddress, LEFT(EmailAddress, CHARINDEX('@', EmailAddress) - 1) as Use
 FROM SalesLT.Customer
 ```
 
+</details>
+
+
 3. Napisz zapytanie SQL, które zwróci identyfikatory produktów `ProductDescriptionID` oraz ich opisy `Description` z tabeli `SalesLT.ProductDescription`, pod warunkiem, że długość opisu przekracza 20 znaków i jednocześnie opis nie zawiera znaku zapytania '?'.
 
+
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROZWIĄZANIE
@@ -243,3 +254,5 @@ SELECT ProductDescriptionID, Description
 FROM SalesLT.ProductDescription
 WHERE LEN([Description]) > 20 AND CHARINDEX('?', [Description]) = 0
 ```
+
+</details>

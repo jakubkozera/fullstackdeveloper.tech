@@ -227,6 +227,7 @@ W wyniku otrzymamy kolumnę `OrderDetailCount`, która zawiera liczbę wierszy d
 
 Wykorzystując funkcję okienną `SUM`, dowiedz się, ile największych sprzedaży dokonał, sprzedawca `adventure-works\jae0`, zanim przekroczył łączną kwotę sprzedaży `(tabela: SalesOrderHeader, kolumna: SubTotal)` 500 000. 
 
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROZWIĄZANIE
@@ -241,6 +242,8 @@ FROM (
 ) sub
 WHERE RunningSum < 500000
 ```
+
+</details>
 
 
 

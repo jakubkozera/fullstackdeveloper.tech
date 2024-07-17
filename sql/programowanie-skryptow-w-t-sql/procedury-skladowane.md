@@ -210,6 +210,8 @@ END;
 1. Stwórz procedurę składowaną, która na podstawie tytułu książki oraz identyfikatora użytkownika rezerwuje dostępny egzemplarz (`Copy`) danej książki i tworzy wpis w tabeli `Loans`. Procedura ma zwracać informację o tym, czy wypożyczenie zostało wykonane, pod postacią wartości typu `BIT`. Całość przetestuj, dla tytułów, które zarówno mają dostępne aktualnie egzemplarze, jak i nie mają ich.
 
 
+<details><summary><b>Rozwiązanie</b></summary>
+
 ```sql
 -- ROZWIĄZANIE
 CREATE PROCEDURE LoanBook
@@ -242,12 +244,16 @@ BEGIN
 END
 ```
 
+</details>
+
+
 2. Napisz procedurę składowaną, która generuje raport o wypożyczonych książkach na podstawie ilości dni, które upłynęły od wypożyczenia jako parametr wejściowy.
 
 Raport powinien zawierać informacje o tym, kto, kiedy i co wypożyczył: (użytkownik, tytuł, data wypożyczenia)
 
 Procedura powinna również zwracać liczbę egzemplarzy książek (parametr wyjściowy), które zostały wypożyczone na tyle dni lub dłużej.
 
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROZWIĄZANIE
@@ -267,3 +273,5 @@ BEGIN
     SET @NumberOfLoanedBooks = @@ROWCOUNT
 END
 ```
+
+</details>

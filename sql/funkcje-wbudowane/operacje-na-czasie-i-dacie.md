@@ -155,6 +155,7 @@ Format `'yyyy-MM-dd HH:mm:ss'` oznacza następujące wartości:
 
 1. Obliczanie opóźnienia dostawy zamówienia, róźnica między datą zamówienia `OrderDate` a datą dostawy `ShipDate` w dniach, z tabeli `SalesLT.SalesOrderHeader`
 
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROZWIĄZANIE
@@ -163,8 +164,13 @@ SELECT SalesOrderID, OrderDate, ShipDate, DATEDIFF(DAY, OrderDate, ShipDate) as 
 FROM SalesLT.SalesOrderHeader
 ```
 
+</details>
+
+
 2. Napisz zapytanie, które zwróci zamówienia z czerwca 2008 roku (`OrderDate`)
 
+
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROZWIĄZANIE
@@ -174,10 +180,16 @@ FROM SalesLT.SalesOrderHeader
 WHERE YEAR(OrderDate) = 2008 AND MONTH(OrderDate) = 6
 ```
 
+</details>
+
+
+
+
 3. Napisz zapytanie, które zwróci nazwę zamówienia w formacie:
 
 `<SalesOrderNumber>-<OrderDate:yyyyMMdd>`
 
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROZWIĄZANIE
@@ -187,3 +199,5 @@ FROM SalesLT.SalesOrderHeader
 SELECT SalesOrderNumber, OrderDate, SalesOrderNumber + '-' + FORMAT(OrderDate, 'yyyyMMdd')
 FROM SalesLT.SalesOrderHeader
 ```
+
+</details>

@@ -166,7 +166,7 @@ Dla książek, które mają już 10 kopii lub więcej, procedura nie powinna dod
 Całość przetestuj na przykładowych danych, w różnych scenariuszach.
 
 
-
+<details><summary><b>Rozwiązanie</b></summary>
 
 ```sql
 -- ROZWIĄZANIE
@@ -198,3 +198,5 @@ BEGIN
     END
 END
 ```
+
+</details>

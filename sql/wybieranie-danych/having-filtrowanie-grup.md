@@ -41,7 +41,7 @@ HAVING NumberOfProducts > 10;
 
 ## Zadanie praktyczne
 
-1. Znajdź wszystkich sprzedawców `SalesPerson`, którzy obslugują co najmniej 100 klientów
+1\. Znajdź wszystkich sprzedawców `SalesPerson`, którzy obslugują co najmniej 100 klientów
 
 
 <details><summary>Rozwiązanie</summary>
