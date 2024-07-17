@@ -44,8 +44,7 @@ HAVING NumberOfProducts > 10;
 1. Znajdź wszystkich sprzedawców `SalesPerson`, którzy obslugują co najmniej 100 klientów
 
 
-<details>
-<summary>Rozwiązanie</summary>
+<details><summary>Rozwiązanie</summary>
 
 ```sql
 SELECT SalesPerson, COUNT(*) CustomerCount
