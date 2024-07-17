@@ -132,13 +132,6 @@ END;
 ```
 
 
-Commands completed successfully.
-
-
-
-Total execution time: 00:00:00.002
-
-
 Po modyfikacji funkcji, zwraca teraz ona nowe rezultaty:
 
 
@@ -204,13 +197,6 @@ RETURN
 ```
 
 
-Commands completed successfully.
-
-
-
-Total execution time: 00:00:00.001
-
-
 Aby wywołać tą funkcje, ponownie będziemy musieli do niej przekazać parametr, a rezultat może nam posłużyć jako tabela, którą możemy filtrować, łączyć z innymi czy grupować.
 
 
@@ -258,13 +244,6 @@ RETURN
     WHERE AuthorId = @AuthorId
 );
 ```
-
-
-Commands completed successfully.
-
-
-
-Total execution time: 00:00:00.001
 
 
 Po modyfikacji funkcji tablicowej, będzie ona zwracała nowe rezultaty

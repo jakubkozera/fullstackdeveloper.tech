@@ -201,11 +201,6 @@ END;
 ```
 
 
-Commands completed successfully.
-
-
-
-Total execution time: 00:00:00.001
 
 
 ## Zadanie

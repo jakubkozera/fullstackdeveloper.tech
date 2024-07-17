@@ -133,9 +133,6 @@ Koniec skryptu
 
 
 
-Total execution time: 00:00:00
-
-
 ## Zadanie praktyczne
 
 
